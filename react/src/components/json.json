@@ -1,0 +1,385 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0uGk2czvcpWQA383Im6ajf"
+      },
+      "followers": {
+        "href": null,
+        "total": 1637309
+      },
+      "genres": [
+        "alt z",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0uGk2czvcpWQA383Im6ajf",
+      "id": "0uGk2czvcpWQA383Im6ajf",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb407c4473a9f99528f59443ca",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174407c4473a9f99528f59443ca",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178407c4473a9f99528f59443ca",
+          "width": 160
+        }
+      ],
+      "name": "Maggie Lindemann",
+      "popularity": 71,
+      "type": "artist",
+      "uri": "spotify:artist:0uGk2czvcpWQA383Im6ajf"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2oblUaHZixbcEIQR9Jhrcj"
+      },
+      "followers": {
+        "href": null,
+        "total": 18919
+      },
+      "genres": [
+        "german indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2oblUaHZixbcEIQR9Jhrcj",
+      "id": "2oblUaHZixbcEIQR9Jhrcj",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb732d77fba697ea9ce40fb5f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174b732d77fba697ea9ce40fb5f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178b732d77fba697ea9ce40fb5f",
+          "width": 160
+        }
+      ],
+      "name": "Buntspecht",
+      "popularity": 45,
+      "type": "artist",
+      "uri": "spotify:artist:2oblUaHZixbcEIQR9Jhrcj"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2xaAOVImG2O6lURwqperlD"
+      },
+      "followers": {
+        "href": null,
+        "total": 922865
+      },
+      "genres": [
+        "modern alternative rock",
+        "modern rock",
+        "rock",
+        "stomp pop",
+        "welsh rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2xaAOVImG2O6lURwqperlD",
+      "id": "2xaAOVImG2O6lURwqperlD",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb01a837e48a3a9f6f8b2b549",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174b01a837e48a3a9f6f8b2b549",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178b01a837e48a3a9f6f8b2b549",
+          "width": 160
+        }
+      ],
+      "name": "Catfish and the Bottlemen",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:2xaAOVImG2O6lURwqperlD"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7ADRm1oT7VmhRRZrZqycV6"
+      },
+      "followers": {
+        "href": null,
+        "total": 208857
+      },
+      "genres": [
+        "german alternative rap",
+        "german hip hop",
+        "german trap",
+        "tekk"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7ADRm1oT7VmhRRZrZqycV6",
+      "id": "7ADRm1oT7VmhRRZrZqycV6",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebf9c4c6a1a21ba86d51fd2053",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174f9c4c6a1a21ba86d51fd2053",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178f9c4c6a1a21ba86d51fd2053",
+          "width": 160
+        }
+      ],
+      "name": "KASIMIR1441",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:7ADRm1oT7VmhRRZrZqycV6"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2kCcBybjl3SAtIcwdWpUe3"
+      },
+      "followers": {
+        "href": null,
+        "total": 8442517
+      },
+      "genres": [
+        "emo rap",
+        "lgbtq+ hip hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2kCcBybjl3SAtIcwdWpUe3",
+      "id": "2kCcBybjl3SAtIcwdWpUe3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6685f03de475c4efb27da3c4",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746685f03de475c4efb27da3c4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786685f03de475c4efb27da3c4",
+          "width": 160
+        }
+      ],
+      "name": "Lil Peep",
+      "popularity": 88,
+      "type": "artist",
+      "uri": "spotify:artist:2kCcBybjl3SAtIcwdWpUe3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5uLkZ7FWMTBUg1corQqdkR"
+      },
+      "followers": {
+        "href": null,
+        "total": 434861
+      },
+      "genres": [
+        "emo rap",
+        "pop rap",
+        "sad lo-fi",
+        "sad rap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5uLkZ7FWMTBUg1corQqdkR",
+      "id": "5uLkZ7FWMTBUg1corQqdkR",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb0d472370bb34d92337b3624b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051740d472370bb34d92337b3624b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1780d472370bb34d92337b3624b",
+          "width": 160
+        }
+      ],
+      "name": "Lund",
+      "popularity": 68,
+      "type": "artist",
+      "uri": "spotify:artist:5uLkZ7FWMTBUg1corQqdkR"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2DEfqyWjAMIfKYMXb1V8L1"
+      },
+      "followers": {
+        "href": null,
+        "total": 56732
+      },
+      "genres": [
+        "hip hop tuga",
+        "trap tuga"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2DEfqyWjAMIfKYMXb1V8L1",
+      "id": "2DEfqyWjAMIfKYMXb1V8L1",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb2c60af20f49edbe08412b7a1",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051742c60af20f49edbe08412b7a1",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1782c60af20f49edbe08412b7a1",
+          "width": 160
+        }
+      ],
+      "name": "Nenny",
+      "popularity": 47,
+      "type": "artist",
+      "uri": "spotify:artist:2DEfqyWjAMIfKYMXb1V8L1"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V"
+      },
+      "followers": {
+        "href": null,
+        "total": 4119494
+      },
+      "genres": [
+        "alternative rock",
+        "garage rock",
+        "modern rock",
+        "permanent wave",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0epOFNiUfyON9EYx7Tpr6V",
+      "id": "0epOFNiUfyON9EYx7Tpr6V",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb64d74f5985cb66b2f7b60e93",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517464d74f5985cb66b2f7b60e93",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17864d74f5985cb66b2f7b60e93",
+          "width": 160
+        }
+      ],
+      "name": "The Strokes",
+      "popularity": 79,
+      "type": "artist",
+      "uri": "spotify:artist:0epOFNiUfyON9EYx7Tpr6V"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "followers": {
+        "href": null,
+        "total": 21593661
+      },
+      "genres": [
+        "beatlesque",
+        "british invasion",
+        "classic rock",
+        "merseybeat",
+        "psychedelic rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id": "3WrFJ7ztbogyGnTHbHJFl2",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe9348cc01ff5d55971b22433",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e9348cc01ff5d55971b22433",
+          "width": 160
+        }
+      ],
+      "name": "The Beatles",
+      "popularity": 90,
+      "type": "artist",
+      "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/34JhhuxlkDFSA5ek4AuZOp"
+      },
+      "followers": {
+        "href": null,
+        "total": 151079
+      },
+      "genres": [
+        "brazilian hip hop",
+        "nerdcore brasileiro",
+        "trap brasileiro"
+      ],
+      "href": "https://api.spotify.com/v1/artists/34JhhuxlkDFSA5ek4AuZOp",
+      "id": "34JhhuxlkDFSA5ek4AuZOp",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb94a825f57283d83922af280e",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517494a825f57283d83922af280e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17894a825f57283d83922af280e",
+          "width": 160
+        }
+      ],
+      "name": "Yung Buda",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:34JhhuxlkDFSA5ek4AuZOp"
+    }
+  ],
+  "total": 50,
+  "limit": 10,
+  "offset": 5,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=5&time_range=short_term",
+  "previous": null,
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=15&time_range=short_term"
+}
