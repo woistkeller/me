@@ -1,52 +1,51 @@
-import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
+import axios from "axios";
+
+import styled from "styled-components";
+import { Subtitle, Button, Text } from "./styles";
 
 import { BsSpotify, BsFillPlayFill, BsFillStopFill } from "react-icons/bs";
 
-import { Title, Subtitle, Button } from "./styles";
-import axios from "axios";
-
 export default function Spotify() {
   const [song, setSong] = useState();
-  const [isPlaying, setIsPlaying] = useState();
+  const [isPlaying, setIsPlaying] = useState(false);
   const player = useRef();
 
   useEffect(() => {
     var fetching = async () =>
-      await axios.get(`http://127.0.0.1:3005/spotify`).then((e) => {
-        console.log(e);
+      await axios.get(`https://caian.herokuapp.com/spotify`).then((e) => {
         setSong(e.data);
       });
     fetching();
   }, []);
 
-  let expire;
-
   useEffect(() => {
-    if (isPlaying !== true) {
-      clearInterval(expire);
-    }
-
-    expire = setInterval(() => {
+    let expire = setInterval(() => {
       if (player.current.currentTime > 30) {
         clearInterval(expire);
         setIsPlaying(false);
       }
     }, 1000);
+
+    if (isPlaying !== true) {
+      clearInterval(expire);
+    }
   }, [isPlaying]);
 
   return (
-    <>
-      <Title style={{ color: "#5df592" }}>
-        What's I've been hearing
-        <BsSpotify style={{ marginLeft: "1rem" }} />
-      </Title>
-      <Container>
+    <Container>
+      <Header>
+        <Subtitle style={{ color: "#141414" }}>
+          What I've been listening...
+        </Subtitle>
+        <BsSpotify />
         <audio
           src={typeof song !== "undefined" && song.preview}
           ref={player}
           type="audio/mpeg"
-        ></audio>
+        />
+      </Header>
+      <Content>
         <Right>
           <Player>
             <div>
@@ -70,46 +69,46 @@ export default function Spotify() {
                   />
                 )}
               </Subtitle>
-              <Artist> {typeof song !== "undefined" && song.artist} </Artist>
+              <Text
+                style={{
+                  margin: 0,
+                  color: "white",
+                  textIndent: 0,
+                  fontSize: "0.9rem",
+                }}
+              >
+                {typeof song !== "undefined" && song.artist}
+              </Text>
               <Button
                 style={{
                   marginTop: "1rem",
                   backgroundColor: "#5df592",
                   color: "#141414",
-                  fontFamily: "roboto, sans-serif",
                 }}
               >
-                Play it on Spotify <BsSpotify style={{ marginLeft: "1rem" }} />
+                Play it on Spotify <BsSpotify />
               </Button>
             </div>
             {typeof song !== "undefined" && song.cached === "true" ? (
               <Cached>
                 This information was cached to avoid break spotify api usage
-                rules :D
+                rules D:
               </Cached>
             ) : null}
           </Player>
         </Right>
-        <div>
-          <Cover src={typeof song !== "undefined" && song.cover.url} />
-        </div>
-      </Container>
-    </>
+        <Cover src={typeof song !== "undefined" && song.cover.url} />
+      </Content>
+    </Container>
   );
 }
 
 const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  color: #5df592;
   background: linear-gradient(180deg, #1db954, #5df592);
-  border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
-
-  @media only screen and (max-width: 656px) {
-    flex-direction: column-reverse;
-  } ;
+  border-radius: 10px;
+  width: 100%;
 `;
 
 const Right = styled.div`
@@ -117,10 +116,10 @@ const Right = styled.div`
   flex-direction: column;
   width: 100%;
   margin-right: 1rem;
-`;
 
-const Artist = styled.div`
-  margin-top: 0.1rem;
+  @media only screen and (max-width: 656px) {
+    margin-top: 1rem;
+  } ;
 `;
 
 const Player = styled.div`
@@ -136,8 +135,6 @@ const Player = styled.div`
 const Cover = styled.img`
   height: 200px;
   width: 200px;
-  border-radius: 7px;
-  padding-bottom: 0;
 
   @media only screen and (max-width: 656px) {
     height: auto;
@@ -146,6 +143,23 @@ const Cover = styled.img`
 `;
 
 const Cached = styled.div`
-  font-size: 0.7rem;
-  justify-self: end;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #5df592;
+`;
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #141414;
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 656px) {
+    flex-direction: column-reverse;
+  } ;
 `;

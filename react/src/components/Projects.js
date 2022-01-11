@@ -1,15 +1,11 @@
 import styled from "styled-components";
-import Card from "./Card";
-
-import { Text } from "./styles";
+import Project from "./Project";
 
 export default function Projects({ projects, page }) {
   return (
     <Container isVisible={page}>
       {Object.entries(projects).map(([key, project], i) => {
-        {
-          return <Card project={project} key={i} />;
-        }
+        return <Project project={project} key={i} />;
       })}
     </Container>
   );
@@ -18,8 +14,6 @@ export default function Projects({ projects, page }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   width: 100%;
-
-  display: ${(props) => (props.isVisible === 'projects' ? "flex" : "none")};
+  display: ${(props) => (props.isVisible === "projects" ? "flex" : "none")};
 `;

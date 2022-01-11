@@ -28,7 +28,6 @@ const Box = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 0 1rem;
   max-width: 1000px;
   width: 100%;
   height: 100%;

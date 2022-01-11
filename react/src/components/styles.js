@@ -1,40 +1,44 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  color: white;
-
-  font-weight: bolder;
-  margin: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  color: white;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
 `;
 
 export const Subtitle = styled.h2`
-  color: white;
   display: flex;
   align-items: center;
+
   font-weight: bolder;
-  font-size: 1rem;
+  color: white;
+  text-shadow: 2px 2px 20px rgba(206, 206, 206, 0.82);
+  font-size: 1.1rem;
   margin: 0.5rem 0;
 `;
 
 export const Text = styled.h3`
-  color: white;
-  margin: 0 0.5rem;
+  color: #141414;
+  text-shadow: 2px 2px 20px rgba(206, 206, 206, 0.82);
+  margin: 0.5rem;
   text-align: justify;
-  font-weight: normal;
+  font-weight: bold;
+  text-indent: 1rem;
 `;
 
 export const Button = styled.button`
-  padding: 0.7rem 1rem;
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  border-radius: 7px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
   outline: none;
   border: none;
   background: ${(props) => (props.noFill ? "none" : "#141414")};
-  color: #6158cb;
+  color: ${(props) => (props.noFill ? "#141414" : "white")};
   font-weight: bold;
 
   display: flex;
@@ -43,7 +47,7 @@ export const Button = styled.button`
   flex-wrap: nowrap;
 
   * {
-    margin-left: 0.5rem;
+    margin-left: ${(props) => (props.noMargin ? "0" : "0.5rem")};
   }
 
   &:active {

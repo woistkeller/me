@@ -1,6 +1,9 @@
-import styled from "styled-components";
 import { useState } from "react";
+
+import styled from "styled-components";
+
 import { SiGithub } from "react-icons/si";
+
 import {
   BsFillFileEarmarkMedicalFill,
   BsLinkedin,
@@ -8,60 +11,22 @@ import {
 } from "react-icons/bs";
 
 import Projects from "../Projects";
-import Info from "../Info";
+import AboutMe from "../AboutMe";
 
-import { Title, Button, Text, Subtitle } from "../styles";
+import { Title, Button, Text } from "../styles";
+
+import projects from "../../data/projects";
 
 export default function Home() {
   const [page, setPage] = useState("projects");
 
-  const projects = [
-    {
-      title: "Vorwärts (personal project)",
-      about: "API and library for public domain books ",
-      demo: "https://vorwarts.herokuapp.com/library",
-      github: "https://github.com/vonweinkeller/vorwarts-api",
-      githubTitle: "vorwarts-api",
-      buildWith: ["React", "Node", "REST API", "MongoDB"],
-    },
-    {
-      title: "EightyFour (personal project)",
-      about: "Social credit social media",
-      demo: "https://eightyfour.vercel.app/",
-      github: "https://github.com/vonweinkeller/eightyfour",
-      githubTitle: "eightyfour",
-      buildWith: [
-        "React",
-        "Redux-Toolkit",
-        "RTK-Query",
-        "SpotifyAPI",
-        "REST API",
-        "MUI",
-        "Node",
-        "Private Routes",
-      ],
-    },
-    {
-      title: "Okuyama (free lance)",
-      about: "Web and Android application for orders and deliveries trackling",
-      demo: "https://marmohta.herokuapp.com",
-      buildWith: [
-        "JQuery",
-        "Boostrap",
-        "Socket.io (client and server side)",
-        "React Native",
-      ],
-    },
-  ];
-
   return (
     <Container>
       <Card>
-        <Title style={{ color: "white" }}>
+        <Title>
           Hi, I'm Caian Keller Cardoso
           <Button
             noFill={true}
-            style={{ color: "#141414" }}
             onClick={() => {
               window.location.href = "https://github.com/vonweinkeller";
             }}
@@ -69,57 +34,47 @@ export default function Home() {
             GitHub Page <SiGithub />
           </Button>
         </Title>
-        <Text style={{ color: "#141414" }}>
+        <Text>
           I am a dedicated and committed web developer, always looking to learn
           new things and discovery technologies. I want to help bring new
           horizons to the web and help it become more accessible, fun and
           developed.
         </Text>
-        <Buttons>
+        <Buttons style={{ justifyContent: "flex-end" }}>
           <Button
-            style={{
-              float: "right",
-              color: "white",
-            }}
-          >
-            Resume <BsFillFileEarmarkMedicalFill />
-          </Button>
-
-          <Button
+            noFill={true}
+            noMargin={true}
             onClick={() =>
               window.open("https://www.linkedin.com/in/caiankeller/")
             }
-            style={{
-              float: "right",
-              color: "white",
-            }}
           >
-            LinkedIn <BsLinkedin />
+            <BsLinkedin color="#141414" />
           </Button>
           <Button
+            noFill={true}
+            noMargin={true}
             onClick={() =>
               window.open("https://www.instagram.com/westerwaldkreis/")
             }
-            style={{
-              float: "right",
-              color: "white",
-            }}
           >
-            Instagram <BsInstagram />
+            <BsInstagram color="#141414" />
+          </Button>
+          <Button>
+            Resume <BsFillFileEarmarkMedicalFill />
           </Button>
         </Buttons>
       </Card>
       <div>
-        <Buttons>
+        <Menu>
           <Button noFill={true} onClick={() => setPage("projects")}>
             Projects
           </Button>
           <Button noFill={true} onClick={() => setPage("aboutme")}>
             About me
           </Button>
-        </Buttons>
+        </Menu>
         <Projects page={page} projects={projects} />
-        <Info page={page} />
+        <AboutMe page={page} />
       </div>
     </Container>
   );
@@ -134,7 +89,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   overflow-y: scroll;
   -ms-overflow-style: none;
@@ -151,17 +106,34 @@ const Card = styled.div`
   padding: 1rem;
   border-radius: 10px;
 
-  background-image: url("/gradientpurple.jpg");
-  background-position: center center;
+  background-image: url("/60e32be45e4022360a25d5fc_Mesh 62.jpg");
+  background-position:  left bottom;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 `;
 
 const Buttons = styled.div`
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
   margin-top: 1rem;
   border-radius: 10px;
   width: 100%;
+
+  * {
+    color: white;
+  }
+`;
+
+const Menu = styled.div`
+  display: flex;
   flex-wrap: wrap;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 10px;
+  width: 100%;
+
+  * {
+    color: white;
+  }
 `;

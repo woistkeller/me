@@ -1,33 +1,36 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import styled from "styled-components";
+import { Button, Text, Subtitle } from "./styles";
+
 import { BsArrowRightShort } from "react-icons/bs";
 import { SiGithub } from "react-icons/si";
 import { MdOpenInNew } from "react-icons/md";
 
-import { Button, Text, Subtitle } from "./styles";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-export default function Card({ project }) {
+export default function Project({ project }) {
   const [commit, setCommit] = useState();
 
   useEffect(() => {
-    var fetching = async (url) =>
-      await axios.get(`http://127.0.0.1:3005/github/${url}/`).then((e) => {
-        setCommit(e.data);
-      });
+    var fetching = async () =>
+      await axios
+        .get(`https://caian.herokuapp.com/github/${project.name}/`)
+        .then((e) => {
+          setCommit(e.data);
+        });
 
-    typeof project.githubTitle !== "undefined" && fetching(project.githubTitle);
-  }, []);
+    fetching();
+  }, [project.name]);
 
   return (
     <Container>
       <Subtitle>{project.title}</Subtitle>
-      <Text style={{ color: "#141414" }}>{project.about}</Text>
-      <BuildWith>
+      <Text>{project.about}</Text>
+      <Tags>
         {project.buildWith.map((buildWith, key) => {
           return <Tag key={key}>{buildWith}</Tag>;
         })}
-      </BuildWith>
+      </Tags>
       <Buttons>
         <Button
           style={{ marginTop: "1rem" }}
@@ -45,29 +48,14 @@ export default function Card({ project }) {
           </Button>
         )}
         {typeof commit !== "undefined" && (
-          <a
-            target="_blank"
-            href={commit.url}
-            style={{ textDecoration: "none" }}
-          >
-            <Text
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                color: "#141414",
-                marginTop: "0.5rem",
-                textDecoration: "underline",
-              }}
-            >
-              {" "}
+          <Link rel="noreferrer" target="_blank" href={commit.url}>
+            <Text>
               <SiGithub style={{ marginRight: "0.5rem" }} />
-              Last commit&nbsp;
-              <b>{commit.message}</b> | {commit.date}
-              <Dot />
-              <MdOpenInNew style={{ marginLeft: "0.5rem" }} />
+              Last commit {commit.message}, {commit.date}
             </Text>
-          </a>
+            <MdOpenInNew style={{ marginRight: "0.5rem" }} />
+            <Dot />
+          </Link>
         )}
       </Buttons>
     </Container>
@@ -76,14 +64,12 @@ export default function Card({ project }) {
 
 const Container = styled.div`
   width: 100%;
-  font-size: 0.8rem;
   color: #141414;
 
   padding: 1rem;
   border-radius: 10px;
   margin-top: 1rem;
 
-  /* background: linear-gradient(55deg, #ce9ffc, #7367f0); */
   background-image: url("/60e32bddce0b78d0ee089614_Mesh 41.jpg");
   background-position: left top;
   background-size: cover;
@@ -96,7 +82,7 @@ const Buttons = styled.div`
   flex-wrap: wrap;
 `;
 
-const BuildWith = styled.div`
+const Tags = styled.div`
   display: flex;
   justify-content: left;
   align-items: center;
@@ -113,7 +99,7 @@ const Tag = styled.div`
   align-items: center;
   margin-top: 1rem;
   padding: 0.5rem;
-  background-color: white;
+  background-color: #c2c2c2;
   color: #141414;
   font-weight: bold;
 
@@ -128,4 +114,12 @@ const Dot = styled.div`
   background-color: #1db954;
   border: 1px solid #1db954;
   box-shadow: 0 0 15px #1db954;
+`;
+
+const Link = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
 `;
