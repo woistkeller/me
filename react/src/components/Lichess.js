@@ -49,7 +49,9 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  background-color: #966f33;
+  background-image: url("/60e3d740d6e599865c0d4b63_Mesh 1.jpg");
+  background-position: center center;
+  background-size: cover;
 
   border-radius: 10px;
 `;

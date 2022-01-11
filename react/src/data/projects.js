@@ -1,7 +1,6 @@
 const projects = [
   {
     title: "Vorwärts (personal project)",
-    about: "API and library for public domain books ",
     demo: "https://vorwarts.herokuapp.com/library",
     github: "https://github.com/vonweinkeller/vorwarts-api",
     name: "vorwarts-api",
@@ -9,7 +8,6 @@ const projects = [
   },
   {
     title: "EightyFour (personal project)",
-    about: "Social credit social media",
     demo: "https://eightyfour.vercel.app/",
     github: "https://github.com/vonweinkeller/eightyfour",
     name: "eightyfour",

@@ -37,7 +37,7 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
-  background-image: url("/60e32be45e4022360a25d5fc_Mesh 62.jpg");
+  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
   background-position: bottom right;
   background-size: cover;
 `;

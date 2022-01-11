@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { usePalette } from "react-palette";
 import axios from "axios";
 
 import styled from "styled-components";
@@ -10,6 +11,9 @@ export default function Spotify() {
   const [song, setSong] = useState();
   const [isPlaying, setIsPlaying] = useState(false);
   const player = useRef();
+
+  const { data } = usePalette(typeof song !== "undefined" && song.cover.url);
+  useEffect(() => {}, [song]);
 
   useEffect(() => {
     var fetching = async () =>
@@ -33,7 +37,7 @@ export default function Spotify() {
   }, [isPlaying]);
 
   return (
-    <Container>
+    <Container dynamicColor={data.vibrant} isPlaying={isPlaying}>
       <Header>
         <Subtitle style={{ color: "#141414" }}>
           What I've been listening...
@@ -49,7 +53,7 @@ export default function Spotify() {
         <Right>
           <Player>
             <div>
-              <Subtitle style={{ margin: "0" }}>
+              <Subtitle style={{ margin: "0", color: "white" }}>
                 {typeof song !== "undefined" && song.title}
                 {isPlaying ? (
                   <BsFillStopFill
@@ -91,8 +95,8 @@ export default function Spotify() {
             </div>
             {typeof song !== "undefined" && song.cached === "true" ? (
               <Cached>
-                This information was cached to avoid break spotify api usage
-                rules D:
+                This information come from a cache to avoid break spotify api
+                usage rules. Last update at {song.updated_at}
               </Cached>
             ) : null}
           </Player>
@@ -104,7 +108,10 @@ export default function Spotify() {
 }
 
 const Container = styled.div`
-  background: linear-gradient(180deg, #1db954, #5df592);
+  background: ${(props) =>
+    props.dynamicColor
+      ? props.dynamicColor
+      : "linear-gradient(180deg, #1db954, #5df592)"};
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 10px;
@@ -135,6 +142,8 @@ const Player = styled.div`
 const Cover = styled.img`
   height: 200px;
   width: 200px;
+  -webkit-box-shadow: 0px 0px 11px -1px #000000;
+  box-shadow: 0px 0px 11px -1px #000000;
 
   @media only screen and (max-width: 656px) {
     height: auto;
@@ -143,6 +152,7 @@ const Cover = styled.img`
 `;
 
 const Cached = styled.div`
+  text-align: justify;
   margin-top: 1rem;
   font-size: 0.8rem;
   color: #5df592;

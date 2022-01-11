@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Subtitle, Text, Button } from "./styles";
+import { Subtitle, Text } from "./styles";
 
 import Technologies from "./Technologies";
 
@@ -9,12 +9,22 @@ export default function Me() {
       <Subtitle>Technologies</Subtitle>
       <Text>
         I know everything. Well, not everything, but I am proficient and
-        comfortable learning anything, thing that I love. I've digging React and Node,
-        as their environment and, building amazing real projects that have given
-        me <del>headaches, resilience and problem solving experience</del>{" "}
+        comfortable learning anything, thing that I love. I've digging React and
+        Node, as their environment and, building amazing real projects that have
+        given me <del>headaches, resilience and problem solving experience</del>{" "}
         pride.
       </Text>
       <Technologies />
+      <Text style={{ color: "rgb(148, 255, 110)" }}>Good knowledge</Text>
+      <Text style={{ color: "rgb(250, 167, 72)" }}>Some experience</Text>
+      <Text style={{ color: "rgb(103, 201, 240)" }}>
+        Interest (they are so sexy 🥰)
+      </Text>
+      <Text>
+        I get bored easly, so I'm looking for challenges(always :D), that'll
+        remain my motivation and help my evolution in my path to web developer
+        and software engineering seniority.
+      </Text>
     </Container>
   );
 }
@@ -25,7 +35,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background-image: url("/60e32be45e4022360a25d5fc_Mesh 62.jpg");
+  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
   background-position: bottom right;
   background-size: cover;
 `;

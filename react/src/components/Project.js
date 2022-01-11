@@ -9,14 +9,14 @@ import { SiGithub } from "react-icons/si";
 import { MdOpenInNew } from "react-icons/md";
 
 export default function Project({ project }) {
-  const [commit, setCommit] = useState();
+  const [github, setGithub] = useState();
 
   useEffect(() => {
     var fetching = async () =>
       await axios
         .get(`https://caian.herokuapp.com/github/${project.name}/`)
         .then((e) => {
-          setCommit(e.data);
+          setGithub(e.data);
         });
 
     fetching();
@@ -25,7 +25,7 @@ export default function Project({ project }) {
   return (
     <Container>
       <Subtitle>{project.title}</Subtitle>
-      <Text>{project.about}</Text>
+      <Text>{typeof github !== "undefined" && github.description}</Text>
       <Tags>
         {project.buildWith.map((buildWith, key) => {
           return <Tag key={key}>{buildWith}</Tag>;
@@ -33,7 +33,7 @@ export default function Project({ project }) {
       </Tags>
       <Buttons>
         <Button
-          style={{ marginTop: "1rem" }}
+          style={{ marginTop: "1rem", marginRight: "1rem" }}
           onClick={() => window.open(project.demo)}
         >
           Demo
@@ -47,11 +47,11 @@ export default function Project({ project }) {
             GitHub <SiGithub />
           </Button>
         )}
-        {typeof commit !== "undefined" && (
-          <Link rel="noreferrer" target="_blank" href={commit.url}>
+        {typeof github !== "undefined" && (
+          <Link rel="noreferrer" target="_blank" href={github.url}>
             <Text>
               <SiGithub style={{ marginRight: "0.5rem" }} />
-              Last commit {commit.message}, {commit.date}
+              Last commit {github.message}, {github.date}
             </Text>
             <MdOpenInNew style={{ marginRight: "0.5rem" }} />
             <Dot />
@@ -70,7 +70,7 @@ const Container = styled.div`
   border-radius: 10px;
   margin-top: 1rem;
 
-  background-image: url("/60e32bddce0b78d0ee089614_Mesh 41.jpg");
+  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
   background-position: left top;
   background-size: cover;
 `;

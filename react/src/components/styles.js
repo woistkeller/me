@@ -5,7 +5,7 @@ export const Title = styled.h1`
   justify-content: space-between;
   align-items: center;
 
-  color: white;
+  color: black;
   font-weight: bolder;
   font-size: 1.3rem;
   margin: 0.5rem 0;
@@ -15,19 +15,19 @@ export const Subtitle = styled.h2`
   display: flex;
   align-items: center;
 
-  font-weight: bolder;
-  color: white;
-  text-shadow: 2px 2px 20px rgba(206, 206, 206, 0.82);
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 20px rgba(206, 206, 206, 0.62);
   font-size: 1.1rem;
   margin: 0.5rem 0;
 `;
 
 export const Text = styled.h3`
   color: #141414;
-  text-shadow: 2px 2px 20px rgba(206, 206, 206, 0.82);
+  text-shadow: 2px 2px 20px rgba(206, 206, 206, 0.62);
   margin: 0.5rem;
   text-align: justify;
-  font-weight: bold;
+  font-weight: normal;
   text-indent: 1rem;
 `;
 

@@ -12,6 +12,7 @@ import {
 
 import Projects from "../Projects";
 import AboutMe from "../AboutMe";
+import Playground from "../Playground";
 
 import { Title, Button, Text } from "../styles";
 
@@ -59,7 +60,7 @@ export default function Home() {
           >
             <BsInstagram color="#141414" />
           </Button>
-          <Button>
+          <Button noFill={true}>
             Resume <BsFillFileEarmarkMedicalFill />
           </Button>
         </Buttons>
@@ -72,9 +73,13 @@ export default function Home() {
           <Button noFill={true} onClick={() => setPage("aboutme")}>
             About me
           </Button>
+          <Button noFill={true} onClick={() => setPage("playground")}>
+            Playground
+          </Button>
         </Menu>
         <Projects page={page} projects={projects} />
         <AboutMe page={page} />
+        <Playground page={page} />
       </div>
     </Container>
   );
@@ -106,9 +111,9 @@ const Card = styled.div`
   padding: 1rem;
   border-radius: 10px;
 
-  background-image: url("/60e32be45e4022360a25d5fc_Mesh 62.jpg");
-  background-position:  left bottom;
-  background-size: 100% 100%;
+  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
+  background-position: left bottom;
+  background-size: cover;
   background-repeat: no-repeat;
 `;
 
@@ -119,10 +124,6 @@ const Buttons = styled.div`
   margin-top: 1rem;
   border-radius: 10px;
   width: 100%;
-
-  * {
-    color: white;
-  }
 `;
 
 const Menu = styled.div`
@@ -132,8 +133,4 @@ const Menu = styled.div`
   margin-top: 1rem;
   border-radius: 10px;
   width: 100%;
-
-  * {
-    color: white;
-  }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FaReact, FaNodeJs, FaVuejs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaVuejs, FaPython } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { DiPhp } from "react-icons/di";
 
@@ -23,7 +23,10 @@ export default function Technologies() {
         <FaVuejs size="50" />
       </Stack>
       <Stack experience="interest">
-        <Icon alt="" src="/remix.png"></Icon>
+        <Icon alt="" src="/remix.png" />
+      </Stack>
+      <Stack experience="interest">
+        <FaPython size="50" />
       </Stack>
     </Container>
   );
