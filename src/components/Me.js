@@ -9,16 +9,16 @@ export default function Me() {
       <Subtitle>Technologies</Subtitle>
       <Text>
         I know everything. Well, not everything, but I am proficient and
-        comfortable learning anything, thing that I love. I've digging React and
-        Node, as their environment and, building amazing real projects that have
-        given me <del>headaches, resilience and problem solving experience</del>{" "}
+        comfortable learning anything. i have delved into React and Node, like
+        their environment and framewokers, building amazing real projects that
+        gave me <del>headache, resilience and problems-solving experience</del>{" "}
         pride.
       </Text>
       <Technologies />
       <Text>
-        I get bored easly, so I'm looking for challenges(always :D), that'll
-        remain my motivation and help my evolution in my path to web developer
-        and software engineering seniority.
+        I get bored easily, so I'm looking for challenges(always :D), that will
+        keep my motivation up and help my evolution on my way to expertise in
+        web development.
       </Text>
     </Container>
   );
@@ -30,7 +30,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
+  background-image: url("/gradient.jpg");
   background-position: bottom right;
   background-size: cover;
 `;

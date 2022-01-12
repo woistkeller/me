@@ -20,9 +20,11 @@ export default function Spotify() {
     })();
   }, []);
 
-  let expire;
+  var expire;
 
   useEffect(() => {
+    //i am so sorry 😖, but:
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     expire = setInterval(() => {
       if (player.current.currentTime > 30) {
         clearInterval(expire);
@@ -44,7 +46,7 @@ export default function Spotify() {
   return (
     <Container dynamicColor={data.vibrant} isPlaying={isPlaying}>
       <Header>
-        <Subtitle style={{ color: "#141414" }}>
+        <Subtitle style={{ color: "#141414", marginTop: "0" }}>
           What I've been listening...
         </Subtitle>
         <BsSpotify />
@@ -58,25 +60,34 @@ export default function Spotify() {
         <Right>
           <Player>
             <div>
-              <Subtitle style={{ margin: "0" }}>
-                {typeof song !== "undefined" && song.title}
-                {isPlaying ? (
-                  <BsFillStopFill
-                    size="30"
-                    onClick={() => {
-                      player.current.pause();
-                      setIsPlaying(false);
-                    }}
-                  />
-                ) : (
-                  <BsFillPlayFill
-                    size="30"
-                    onClick={() => {
-                      player.current.play();
-                      setIsPlaying(true);
-                    }}
-                  />
-                )}
+              <Subtitle
+                style={{
+                  margin: "0",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <div>{typeof song !== "undefined" && song.title}</div>
+                <div>
+                  {isPlaying ? (
+                    <BsFillStopFill
+                      size="32"
+                      onClick={() => {
+                        player.current.pause();
+                        setIsPlaying(false);
+                      }}
+                    />
+                  ) : (
+                    <BsFillPlayFill
+                      size="32"
+                      onClick={() => {
+                        player.current.play();
+                        setIsPlaying(true);
+                      }}
+                    />
+                  )}
+                </div>
               </Subtitle>
               <Text
                 style={{

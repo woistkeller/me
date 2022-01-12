@@ -2,8 +2,10 @@ import axios from "axios";
 
 const url = {
   production: "https://caian.herokuapp.com",
-  developement: "http://localhost:3005",
+  development: "http://localhost:3005",
 };
+
+// add later cancel fetch
 
 const api = {
   lichessGet: async function () {
@@ -17,9 +19,11 @@ const api = {
     });
   },
   githubGet: async function (gitName) {
-    return await axios.get(`${url.production}/github/${gitName}/`).then((e) => {
-      return e.data;
-    });
+    return await axios
+      .get(`${url.production}/github/${gitName}/`)
+      .then((e) => {
+        return e.data;
+      });
   },
 };
 

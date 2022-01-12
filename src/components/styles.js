@@ -4,11 +4,15 @@ export const Title = styled.h1`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-wrap: wrap;
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0.5rem;
+
+  @media only screen and (max-width: 370px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -23,8 +27,8 @@ export const Subtitle = styled.h2`
 
 export const Text = styled.h3`
   color: #141414;
-  margin: 0.3rem;
   font-size: 0.99rem;
+  margin: 0.5rem 0;
   text-align: justify;
   font-weight: normal;
   text-indent: 2rem;
@@ -36,11 +40,13 @@ export const Button = styled.button`
   align-items: center;
   flex-wrap: nowrap;
 
-  padding: 0.4rem 1.3rem;
+  padding: ${(props) => (props.noFill ? "none" : "0.4rem 1.3rem")};
+  margin: ${(props) => (props.noFill ? "none" : "0.3rem 0")};
   font-size: 1rem;
   border-radius: 7px;
   outline: none;
   border: none;
+
   background: ${(props) => (props.noFill ? "none" : "#141414")};
   color: ${(props) => (props.noFill ? "#141414" : "white")};
   font-weight: bold;

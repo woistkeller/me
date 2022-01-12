@@ -80,6 +80,7 @@ const Tag = styled.div`
   align-items: center;
   margin-top: 0.5rem;
   padding: 0.05rem 0.5rem;
+  border: 1px solid white;
   background-color: ${(props) => props.experience === "good" && "#85d47f"};
   background-color: ${(props) => props.experience === "some" && "#f79c5c"};
   background-color: ${(props) => props.experience === "interest" && "#8ac1d1"};

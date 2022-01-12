@@ -21,5 +21,5 @@ export default function Playground({ page }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `;

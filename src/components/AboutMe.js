@@ -1,6 +1,6 @@
-import styled from "styled-components";
-
 import FadeIn from "react-fade-in";
+
+import styled from "styled-components";
 
 import Me from "./Me";
 import Languages from "./Languages";
@@ -19,5 +19,5 @@ export default function AboutMe({ page }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `;

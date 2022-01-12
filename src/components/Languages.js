@@ -37,7 +37,7 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
-  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
+  background-image: url("/gradient.jpg");
   background-position: bottom right;
   background-size: cover;
 `;

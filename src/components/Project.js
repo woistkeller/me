@@ -15,7 +15,7 @@ export default function Project({ project }) {
     (async function () {
       setGithub(await api.githubGet(project.name));
     })();
-  }, []);
+  }, [project.name]);
 
   return (
     <Container>
@@ -50,7 +50,7 @@ export default function Project({ project }) {
           <Link rel="noreferrer" target="_blank" href={github.url}>
             <SiGithub />
             <div>
-              Last commit {github.message}, {github.date}{" "}
+              Last commit<b>{github.message}</b>, {github.date}{" "}
             </div>
             <Dot />
             <MdOpenInNew />
@@ -64,9 +64,9 @@ export default function Project({ project }) {
 const Container = styled.div`
   padding: 1rem;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
-  background-image: url("/royal-blue-Presentation-Gradient-Background.jpg");
+  background-image: url("/gradient.jpg");
   background-position: left top;
   background-size: cover;
   width: 100%;
@@ -114,13 +114,14 @@ const Dot = styled.div`
   box-shadow: 0 0 15px #1db954;
 `;
 
-const Link = styled.div`
+const Link = styled.a`
   display: flex;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 0.5rem;
+  color: #141414;
 
   * {
     margin-left: 0.5rem;
@@ -128,7 +129,7 @@ const Link = styled.div`
 `;
 
 const Loading = styled(Text)`
-  background-image: url("/loading-buffering.gif");
+  background-image: url("/loading.gif");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 32px;

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
+import api from "../api/api";
 
 import styled from "styled-components";
 import { Subtitle, Button } from "./styles";
-import api from "../api/api";
 
 import { FaChess } from "react-icons/fa";
 
@@ -45,8 +45,8 @@ const Container = styled.div`
   margin-top: 1rem;
   border-radius: 10px;
   width: 100%;
-
-  background-image: url("/60e3d740d6e599865c0d4b63_Mesh 1.jpg");
+  border: 1px solid #141414;
+  background-image: url("/gradientSecondary.png");
   background-position: center center;
   background-size: cover;
 `;
