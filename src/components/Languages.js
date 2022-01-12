@@ -36,7 +36,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   background-image: url("/gradient.jpg");
   background-position: bottom right;
   background-size: cover;

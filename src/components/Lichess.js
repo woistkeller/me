@@ -42,7 +42,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border-radius: 10px;
   width: 100%;
   border: 1px solid #141414;

@@ -9,7 +9,7 @@ export default function Me() {
       <Subtitle>Technologies</Subtitle>
       <Text>
         I know everything. Well, not everything, but I am proficient and
-        comfortable learning anything. i have delved into React and Node, like
+        comfortable learning anything. I' digging into React and Node, like
         their environment and framewokers, building amazing real projects that
         gave me <del>headache, resilience and problems-solving experience</del>{" "}
         pride.
