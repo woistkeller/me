@@ -27,7 +27,16 @@ export default function Home() {
       <FadeIn>
         <Card>
           <Title>
-            Hi, I'm Caian Keller Cardoso
+            <div>
+              <img
+                alt=""
+                src="/favicon.png"
+                width="64"
+                height="64"
+                style={{ marginRight: "0.5rem" }}
+              />
+              Hi, I'm Caian Keller Cardoso
+            </div>
             <ButtonProfile
               noFill={true}
               onClick={() => {

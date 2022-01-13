@@ -131,7 +131,7 @@ const Container = styled.div`
       ? props.dynamicColor
       : "linear-gradient(180deg, #1db954, #5df592)"};
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border-radius: 10px;
   width: 100%;
 
