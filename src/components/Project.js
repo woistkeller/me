@@ -32,6 +32,7 @@ export default function Project({ project }) {
       </Tags>
       <Buttons>
         <Button
+          aria-label={`see a demo of ${project.title}`}
           style={{ marginTop: "1rem", marginRight: "1rem" }}
           onClick={() => window.open(project.demo)}
         >
@@ -40,6 +41,7 @@ export default function Project({ project }) {
         </Button>
         {typeof project.github !== "undefined" && (
           <Button
+            aria-label={`redirect to github page about ${project.title}`}
             style={{ marginTop: "1rem" }}
             onClick={() => window.open(project.github)}
           >
@@ -47,7 +49,12 @@ export default function Project({ project }) {
           </Button>
         )}
         {typeof github !== "undefined" && (
-          <Link rel="noreferrer" target="_blank" href={github.url}>
+          <Link
+            rel="noreferrer"
+            target="_blank"
+            href={github.url}
+            aria-label={`go to github page last commit from ${project.title}`}
+          >
             <SiGithub />
             <div>
               Last commit<b>{github.message}</b>, {github.date}{" "}

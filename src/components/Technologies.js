@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Subtitle } from "./styles";
 
 import { FaReact, FaNodeJs, FaVuejs } from "react-icons/fa";
-import { SiNextdotjs, SiFlask } from "react-icons/si";
+import { SiNextdotjs, SiFlask, SiTypescript } from "react-icons/si";
 import { DiPhp } from "react-icons/di";
 
 export default function Technologies() {
@@ -17,7 +17,7 @@ export default function Technologies() {
           <FaNodeJs />
           Node
         </Tag>
-        <Tag experience="interest">
+        <Tag experience="some">
           <SiNextdotjs />
           Next
         </Tag>
@@ -36,6 +36,10 @@ export default function Technologies() {
         <Tag experience="some">
           <FaReact />
           React Native
+        </Tag>
+        <Tag experience="interest">
+          <SiTypescript />
+          Typescript
         </Tag>
         <Tag experience="interest">Remix</Tag>
         <Tag experience="interest">C++ (may Linus bless us)</Tag>

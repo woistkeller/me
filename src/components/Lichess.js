@@ -27,6 +27,7 @@ export default function Lichess() {
         </div>
       </Rating>
       <Button
+        aria-label="redirect to my lichess profile"
         style={{ marginTop: "1rem" }}
         onClick={() => {
           window.open(lichess.url);

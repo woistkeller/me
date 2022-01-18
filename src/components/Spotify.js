@@ -99,6 +99,7 @@ export default function Spotify() {
                 {typeof song !== "undefined" && song.artist}
               </Text>
               <Button
+                aria-label={`redirect to the spotify a page of ${song.title}`}
                 style={{
                   marginTop: "1rem",
                   backgroundColor: "#5df592",

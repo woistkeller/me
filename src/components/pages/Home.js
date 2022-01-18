@@ -38,7 +38,9 @@ export default function Home() {
               Hi, I'm Caian Keller Cardoso
             </div>
             <ButtonProfile
+              aria-label="redirect to my github profile"
               noFill={true}
+              style={{ textDecoration: "underline" }}
               onClick={() => {
                 window.open("https://github.com/vonweinkeller");
               }}
@@ -54,8 +56,8 @@ export default function Home() {
           </Text>
           <Buttons style={{ justifyContent: "flex-end" }}>
             <Button
+              aria-label="redirect to my linkedin profile"
               noFill={true}
-              noMargin={true}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/caiankeller/")
               }
@@ -63,6 +65,7 @@ export default function Home() {
               <BsLinkedin color="#141414" />
             </Button>
             <Button
+              aria-label="redirect to my instagram profile"
               noFill={true}
               noMargin={true}
               onClick={() =>
@@ -72,6 +75,7 @@ export default function Home() {
               <BsInstagram color="#141414" />
             </Button>
             <Button
+              aria-label="open my resume in PDF"
               onClick={() => {
                 window.open(
                   "https://drive.google.com/file/d/1r_4nA0jSxN-MA7SHzqAQXD6D2ixh8Lj7/view?usp=sharing"
@@ -85,18 +89,21 @@ export default function Home() {
 
         <Menu>
           <Button
+            aria-label="go to projects page"
             noFill={page === "projects" ? false : true}
             onClick={() => setPage("projects")}
           >
             Projects
           </Button>
           <Button
+            aria-label="go to about me page"
             noFill={page === "aboutme" ? false : true}
             onClick={() => setPage("aboutme")}
           >
             About me
           </Button>
           <Button
+            aria-label="go to playground page"
             noFill={page === "playground" ? false : true}
             onClick={() => setPage("playground")}
           >
