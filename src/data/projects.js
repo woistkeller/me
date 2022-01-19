@@ -1,10 +1,24 @@
 const projects = [
   {
+    title: "Okuyama (free lance)",
+    demo: "https://marmohta.herokuapp.com",
+    github: "https://github.com/vonweinkeller/okuyama",
+    name: "okuyama",
+    buildWith: ["JQuery", "Boostrap", "Socket.io", "React Native"],
+  },
+  {
     title: "Vorwärts (personal project)",
     demo: "https://vorwarts.herokuapp.com/library",
     github: "https://github.com/vonweinkeller/vorwarts-api",
     name: "vorwarts-api",
     buildWith: ["React", "Node", "REST API", "MongoDB"],
+  },
+  {
+    title: "This Portfolio",
+    demo: "https://caiakeller.vercel.app",
+    github: "https://github.com/vonweinkeller/me",
+    name: "me",
+    buildWith: ["React", "Styled-components", "Axios"],
   },
   {
     title: "EightyFour (personal project)",
@@ -15,23 +29,11 @@ const projects = [
       "React",
       "Redux-Toolkit",
       "RTK-Query",
-      "SpotifyAPI",
+      "Spotify API",
       "REST API",
       "MUI",
       "Node",
       "Private Routes",
-    ],
-  },
-  {
-    title: "Okuyama (free lance)",
-    demo: "https://marmohta.herokuapp.com",
-    github: "https://github.com/vonweinkeller/okuyama",
-    name: "okuyama",
-    buildWith: [
-      "JQuery",
-      "Boostrap",
-      "Socket.io (client and server side)",
-      "React Native",
     ],
   },
 ];

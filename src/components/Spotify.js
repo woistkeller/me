@@ -1,30 +1,20 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { usePalette } from "react-palette";
-import api from "../api/api";
 
 import styled from "styled-components";
 import { Subtitle, Button, Text } from "./styles";
 
 import { BsSpotify, BsFillPlayFill, BsFillStopFill } from "react-icons/bs";
 
-export default function Spotify() {
-  const [song, setSong] = useState();
+export default function Spotify({ song }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const player = useRef();
 
   const { data } = usePalette(typeof song !== "undefined" && song.cover.url);
 
-  useEffect(() => {
-    (async function () {
-      setSong(await api.spotifyGet());
-    })();
-  }, []);
-
   var expire;
 
   useEffect(() => {
-    //i am so sorry 😖, but:
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     expire = setInterval(() => {
       if (player.current.currentTime > 30) {
         clearInterval(expire);
@@ -42,6 +32,13 @@ export default function Spotify() {
       clearInterval(expire);
     };
   });
+
+  var play = useCallback(() => {
+    {
+      isPlaying ? player.current.pause() : player.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  }, [isPlaying]);
 
   return (
     <Container dynamicColor={data.vibrant} isPlaying={isPlaying}>
@@ -71,21 +68,9 @@ export default function Spotify() {
                 <div>{typeof song !== "undefined" && song.title}</div>
                 <div>
                   {isPlaying ? (
-                    <BsFillStopFill
-                      size="32"
-                      onClick={() => {
-                        player.current.pause();
-                        setIsPlaying(false);
-                      }}
-                    />
+                    <BsFillStopFill size="32" onClick={play} />
                   ) : (
-                    <BsFillPlayFill
-                      size="32"
-                      onClick={() => {
-                        player.current.play();
-                        setIsPlaying(true);
-                      }}
-                    />
+                    <BsFillPlayFill size="32" onClick={play} />
                   )}
                 </div>
               </Subtitle>
@@ -99,14 +84,16 @@ export default function Spotify() {
                 {typeof song !== "undefined" && song.artist}
               </Text>
               <Button
-                aria-label={`redirect to the spotify a page of ${song.title}`}
+                aria-label={`redirect to the spotify a page of ${
+                  typeof song !== "undefined" && song.title
+                }`}
                 style={{
                   marginTop: "1rem",
                   backgroundColor: "#5df592",
                   color: "#141414",
                 }}
                 onClick={() => {
-                  window.open(song.url);
+                  window.open(song.playIt);
                 }}
               >
                 Play it on Spotify <BsSpotify />

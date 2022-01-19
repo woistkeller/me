@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { Subtitle, Text, Button } from "./styles";
 
 import { FaWhatsapp } from "react-icons/fa";
-import { Subtitle, Text, Button } from "./styles";
 
 export default function Languages() {
   return (
@@ -37,10 +37,14 @@ export default function Languages() {
           alt=""
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flag_of_Norway_%28c81329_for_red_%26_14275b_for_blue%29.svg/1280px-Flag_of_Norway_%28c81329_for_red_%26_14275b_for_blue%29.svg.png"
         />
-        Interest in Norwegian and Italian. Wanna help? Send me some cool content
-        :)
-        <Button aria-label="redirect to my whatsapp">
-          Whatsapp me <FaWhatsapp />
+        Interest in Norwegian and Italian. Wanna help? :)
+        <Button
+          aria-label="redirect to a whatsapp chat with me"
+          style={{ marginTop: "1rem" }}
+          onClick={() => window.open("https://wa.me/+550139881274272")}
+        >
+          send me some cool content in those languages
+          <FaWhatsapp />
         </Button>
       </Text>
     </Container>
@@ -53,7 +57,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   background-image: url("/gradient.jpg");
   background-position: bottom right;
   background-size: cover;

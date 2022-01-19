@@ -1,10 +1,14 @@
-import styled from "styled-components";
-import Project from "./Project";
 import FadeIn from "react-fade-in";
 
-export default function Projects({ projects, page }) {
+import styled from "styled-components";
+import Project from "./Project";
+
+//get a selected list of projects
+import projects from "../data/projects";
+
+export default function Projects() {
   return (
-    <Container isVisible={page}>
+    <Container>
       <FadeIn>
         {Object.entries(projects).map(([key, project], i) => {
           return <Project project={project} key={i} />;

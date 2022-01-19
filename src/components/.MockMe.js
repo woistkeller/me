@@ -1,3 +1,6 @@
+//manutention
+//is not being used, due to some difficulties in the backend
+
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import socketIOClient from "socket.io-client";

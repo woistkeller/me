@@ -17,6 +17,15 @@ export default function Project({ project }) {
     })();
   }, [project.name]);
 
+  //ugly code, can be simplified
+  //is it better put they directly in github state??
+  if (typeof github !== "undefined") {
+    var date = github.date.split("T");
+
+    var day = date[0].slice(5, 10).replace("-", "/");
+    var time = date[1].slice(0, 5);
+  }
+
   return (
     <Container>
       <Subtitle>{project.title}</Subtitle>
@@ -53,14 +62,14 @@ export default function Project({ project }) {
             rel="noreferrer"
             target="_blank"
             href={github.url}
-            aria-label={`go to github page last commit from ${project.title}`}
+            aria-label={`go to github page of last commit of ${project.title}`}
           >
             <SiGithub />
-            <div>
-              Last commit<b>{github.message}</b>, {github.date}{" "}
+            <div style={{ marginLeft: "0.5rem" }}>
+              Last commit <b>{github.message}</b>, day {day}, hour {time}.
             </div>
             <Dot />
-            <MdOpenInNew />
+            <MdOpenInNew style={{ marginLeft: "0.5rem" }} />
           </Link>
         )}
       </Buttons>
@@ -71,10 +80,10 @@ export default function Project({ project }) {
 const Container = styled.div`
   padding: 1rem;
   border-radius: 10px;
-  margin-top: 0.5rem;
+  margin: 1rem 0;
 
   background-image: url("/gradient.jpg");
-  background-position: left top;
+  background-position: center;
   background-size: cover;
   width: 100%;
   color: #141414;
@@ -128,9 +137,11 @@ const Link = styled.a`
   flex-wrap: wrap;
   width: 100%;
   margin-top: 0.5rem;
+  padding: 1rem;
+  border-radius: 7px;
+  background-color: white;
   color: #141414;
-
-  * {
+  F * {
     margin-left: 0.5rem;
   }
 `;

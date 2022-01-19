@@ -9,9 +9,9 @@ export default function Me() {
       <Subtitle>Technologies</Subtitle>
       <Text>
         I know everything. Well, not everything, but I am proficient and
-        comfortable learning anything. I' digging into React and Node, like
-        their environment and framewokers, building amazing real projects that
-        gave me <del>headache, resilience and problems-solving experience</del>{" "}
+        comfortable learning anything. I've been digging into React and Node,
+        like their environment and framewokers, building amazing real projects
+        that gave me (headache, resilience and problems-solving experience)
         pride.
       </Text>
       <Technologies />
@@ -33,4 +33,5 @@ const Container = styled.div`
   background-image: url("/gradient.jpg");
   background-position: bottom right;
   background-size: cover;
+  margin-top: 1rem;
 `;

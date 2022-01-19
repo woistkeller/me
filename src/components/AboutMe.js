@@ -4,13 +4,15 @@ import styled from "styled-components";
 
 import Me from "./Me";
 import Languages from "./Languages";
+import Contact from "./Contact";
 
-export default function AboutMe({ page }) {
+export default function AboutMe() {
   return (
-    <Container isVisible={page}>
+    <Container>
       <FadeIn>
         <Me />
         <Languages />
+        <Contact />
       </FadeIn>
     </Container>
   );
@@ -19,5 +21,5 @@ export default function AboutMe({ page }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 `;

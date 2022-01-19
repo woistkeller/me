@@ -8,7 +8,7 @@ export const Title = styled.h1`
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 3);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   margin: 0.5rem;
 
   @media only screen and (max-width: 370px) {

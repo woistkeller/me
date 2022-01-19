@@ -1,17 +1,17 @@
+import FadeIn from "react-fade-in";
+
 import styled from "styled-components";
 import { Title } from "./styles";
-
-import FadeIn from "react-fade-in";
 
 import Spotify from "./Spotify";
 import Lichess from "./Lichess";
 
-export default function Playground({ page }) {
+export default function Playground({ song }) {
   return (
-    <Container isVisible={page}>
+    <Container>
       <FadeIn>
         <Title style={{ color: "#141414" }}>Welcome to my playground</Title>
-        <Spotify />
+        <Spotify song={song} />
         <Lichess />
       </FadeIn>
     </Container>
@@ -21,5 +21,9 @@ export default function Playground({ page }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  * {
+    text-shadow: none;
+  }
 `;
