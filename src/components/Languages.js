@@ -37,13 +37,14 @@ export default function Languages() {
           alt=""
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flag_of_Norway_%28c81329_for_red_%26_14275b_for_blue%29.svg/1280px-Flag_of_Norway_%28c81329_for_red_%26_14275b_for_blue%29.svg.png"
         />
-        Interest in Norwegian and Italian. Wanna help? :)
+        Interest in Norwegian and Italian. Wanna help? :) Send me some cool
+        content in those languages
         <Button
           aria-label="redirect to a whatsapp chat with me"
           style={{ marginTop: "1rem" }}
           onClick={() => window.open("https://wa.me/+550139881274272")}
         >
-          send me some cool content in those languages
+          here
           <FaWhatsapp />
         </Button>
       </Text>
@@ -58,9 +59,7 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
-  background-image: url("/gradient.jpg");
-  background-position: bottom right;
-  background-size: cover;
+  background: linear-gradient(170deg, #514da2, #423f84a1);
 `;
 
 const Flag = styled.img`

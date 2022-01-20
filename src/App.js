@@ -47,8 +47,8 @@ const Container = styled.div`
 
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(90deg, white 21px, transparent 1%) center,
-    linear-gradient(white 21px, transparent 1%) center, #141414;
+  background: linear-gradient(90deg, #141414 21px, transparent 1%) center,
+    linear-gradient(#141414 21px, transparent 1%) center, white;
   background-size: 22px 22px;
 `;
 

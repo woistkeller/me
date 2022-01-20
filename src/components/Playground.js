@@ -10,7 +10,8 @@ export default function Playground({ song }) {
   return (
     <Container>
       <FadeIn>
-        <Title style={{ color: "#141414" }}>Welcome to my playground</Title>
+        <Title>Welcome to my playground</Title>
+        <Title>Here I play with some APIS</Title>
         <Spotify song={song} />
         <Lichess />
       </FadeIn>

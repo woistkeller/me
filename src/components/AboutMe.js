@@ -1,6 +1,7 @@
 import FadeIn from "react-fade-in";
 
 import styled from "styled-components";
+import { Title } from "./styles";
 
 import Me from "./Me";
 import Languages from "./Languages";
@@ -10,6 +11,7 @@ export default function AboutMe() {
   return (
     <Container>
       <FadeIn>
+        <Title>5 years programming to internet</Title>
         <Me />
         <Languages />
         <Contact />

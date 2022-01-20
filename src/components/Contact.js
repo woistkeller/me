@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { Subtitle, Button } from "./styles";
+import { Subtitle, Button, Text } from "./styles";
 
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
     <Container>
-      <SubtitleContact>Contact</SubtitleContact>
-      <SubtitleContact>caiankardoso@gmail.com</SubtitleContact>
-      <SubtitleContact>caiankeller@icloud.com</SubtitleContact>
+      <Subtitle>Contact</Subtitle>
+      <Text>caiankardoso@gmail.com</Text>
+      <Text>caiankeller@icloud.com</Text>
       <SubtitleContact>
         Whatsapp +55 013 988127-4272{" "}
         <Button
@@ -29,9 +29,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background-image: url("/gradient.jpg");
-  background-position: bottom right;
-  background-size: cover;
+  background: linear-gradient(170deg, #514da2, #423f84a1);
   margin-top: 1rem;
 `;
 

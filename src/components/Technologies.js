@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Subtitle, Text } from "./styles";
 
 import { FaReact, FaNodeJs, FaVuejs } from "react-icons/fa";
-import { SiNextdotjs, SiFlask, SiTypescript } from "react-icons/si";
+import { SiNextdotjs, SiFlask, SiTypescript, SiJquery } from "react-icons/si";
 import { DiPhp } from "react-icons/di";
 
 export default function Technologies() {
@@ -16,6 +16,10 @@ export default function Technologies() {
         <Tag experience="good">
           <FaNodeJs />
           Node
+        </Tag>
+        <Tag experience="good">
+          <SiJquery />
+          JQuery
         </Tag>
         <Tag experience="some">
           <SiNextdotjs />
@@ -81,7 +85,7 @@ const Tag = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  padding: 0.05rem 0.5rem;
+  padding: 0.5rem;
   background-color: ${(props) => props.experience === "good" && "#85d47f"};
   background-color: ${(props) => props.experience === "some" && "#f79c5c"};
   background-color: ${(props) => props.experience === "interest" && "#8ac1d1"};
@@ -94,7 +98,6 @@ const Tag = styled.div`
 const Color = styled(Text)`
   width: 10px;
   height: 10px;
-  text-shadow: 0 0 15px #1db954;
   margin: 0.5rem 0;
 
   color: ${(props) => props.color === "good" && "#85d47f"};

@@ -33,14 +33,15 @@ export default function Bar({ settingPage, page }) {
 const Container = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  background-color: white;
   border-radius: 7px;
   width: 100%;
   margin-top: 0.5rem;
 
-  * {
+  > * {
     width: 100%;
     margin: 0 0.5rem;
+
+    color: white;
   }
 
   @media only screen and (max-width: 400px) {

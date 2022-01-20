@@ -7,7 +7,7 @@ export const Title = styled.h1`
   flex-wrap: wrap;
   color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   margin: 0.5rem;
 
@@ -51,7 +51,7 @@ export const Button = styled.button`
 
   background: ${(props) => (props.noFill ? "none" : "#141414")};
   color: ${(props) => (props.noFill ? "#141414" : "white")};
-  font-weight: bold;
+
   transition: all 300ms ease-in-out;
   word-break: break-all;
 

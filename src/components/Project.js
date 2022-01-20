@@ -66,7 +66,8 @@ export default function Project({ project }) {
           >
             <SiGithub />
             <div style={{ marginLeft: "0.5rem" }}>
-              Last commit <b>{github.message}</b>, day {day}, hour {time}.
+              Last commit <b>{github.message}</b>, day <b>{day}</b>, hour{" "}
+              <b>{time}</b>.
             </div>
             <Dot />
             <MdOpenInNew style={{ marginLeft: "0.5rem" }} />
@@ -81,12 +82,18 @@ const Container = styled.div`
   padding: 1rem;
   border-radius: 10px;
   margin: 1rem 0;
+  width: 100%;
 
-  background-image: url("/gradient.jpg");
+  background: linear-gradient(170deg, #514da2, #423f84a1);
   background-position: center;
   background-size: cover;
-  width: 100%;
+
   color: #141414;
+
+  &:before {
+    background-color: rgb(66, 63, 132);
+    background-size: cover;
+  }
 `;
 
 const Buttons = styled.div`
@@ -141,7 +148,7 @@ const Link = styled.a`
   border-radius: 7px;
   background-color: white;
   color: #141414;
-  F * {
+  * {
     margin-left: 0.5rem;
   }
 `;

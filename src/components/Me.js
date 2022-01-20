@@ -30,7 +30,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background-image: url("/gradient.jpg");
+  background: linear-gradient(170deg, #514da2, #423f84a1);
   background-position: bottom right;
   background-size: cover;
   margin-top: 1rem;

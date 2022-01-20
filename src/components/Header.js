@@ -4,11 +4,7 @@ import styled from "styled-components";
 import { Title, Button, Text } from "./styles";
 
 import { SiGithub } from "react-icons/si";
-import {
-  BsFillFileEarmarkMedicalFill,
-  BsLinkedin,
-  BsInstagram,
-} from "react-icons/bs";
+import { BsFillFileEarmarkMedicalFill, BsLinkedin } from "react-icons/bs";
 
 export default function Header() {
   return (
@@ -77,19 +73,15 @@ const Container = styled.div`
   justify-content: start;
   align-items: left;
   flex-direction: column;
-
   width: 100%;
 `;
 
 const Card = styled.div`
   color: #141414;
-
   padding: 1rem;
   border-radius: 10px;
-
-  background-image: url("/gradient.jpg");
-  background-position: left bottom;
-  background-size: cover;
+  background-image: url("/gradientHeader.jpg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 `;
 
