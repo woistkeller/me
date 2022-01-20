@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Contact() {
   return (
     <Container>
-      <SubtitleContact>Caian Keller Cardoso</SubtitleContact>
+      <SubtitleContact>Contact</SubtitleContact>
       <SubtitleContact>caiankardoso@gmail.com</SubtitleContact>
       <SubtitleContact>caiankeller@icloud.com</SubtitleContact>
       <SubtitleContact>
