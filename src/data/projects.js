@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "This Portfolio",
-    demo: "https://caiakeller.vercel.app",
+    demo: "https://caiankeller.vercel.app",
     github: "https://github.com/vonweinkeller/me",
     name: "me",
     buildWith: ["React", "Styled-components", "Axios"],

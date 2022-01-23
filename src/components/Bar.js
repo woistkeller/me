@@ -36,6 +36,7 @@ const Container = styled.div`
   border-radius: 7px;
   width: 100%;
   margin-top: 0.5rem;
+  background-color: #141414;
 
   > * {
     width: 100%;

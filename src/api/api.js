@@ -9,14 +9,24 @@ const url = {
 
 const api = {
   lichessGet: async function () {
-    return await axios.get(`${url.production}/lichess`).then((e) => {
-      return e.data;
-    });
+    return await axios
+      .get(`${url.production}/lichess`)
+      .then((e) => {
+        return e.data;
+      })
+      .catch((er) => {
+        return "error";
+      });
   },
   spotifyGet: async function () {
-    return await axios.get(`${url.production}/spotify`).then((e) => {
-      return e.data;
-    });
+    return await axios
+      .get(`${url.production}/spotify`)
+      .then((e) => {
+        return e.data;
+      })
+      .catch((er) => {
+        return "error";
+      });
   },
   githubGet: async function (gitName) {
     return await axios.get(`${url.production}/github/${gitName}`).then((e) => {

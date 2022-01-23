@@ -123,6 +123,7 @@ const Tag = styled.div`
   background-color: #c2c2c2;
   color: #141414;
   font-weight: bold;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
 
   border-radius: 5px;
 `;
@@ -146,8 +147,12 @@ const Link = styled.a`
   margin-top: 0.5rem;
   padding: 1rem;
   border-radius: 7px;
-  background-color: white;
+  background-color: #d4d4d4;
   color: #141414;
+  font-family: "IBM Plex Mono", monospace;
+  text-decoration: underline;
+  font-size: 0.9rem;
+
   * {
     margin-left: 0.5rem;
   }

@@ -10,6 +10,7 @@ export const Title = styled.h1`
   font-size: 1.9rem;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   margin: 0.5rem;
+  font-family: "Inter", sans-serif;
 
   @media only screen and (max-width: 370px) {
     font-size: 2rem;
@@ -22,18 +23,20 @@ export const Subtitle = styled.h2`
   text-shadow: 0 0 3px rgba(0, 0, 0, 3);
   font-weight: bold;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.5rem;
+  font-family: "Inter", sans-serif;
 `;
 
 export const Text = styled.p`
   color: white;
   text-shadow: 0 0 3px rgba(0, 0, 0, 3);
-  font-size: 0.99rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
   text-align: justify;
   font-weight: normal;
   text-indent: 2rem;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
 `;
 
 export const Button = styled.button`
@@ -41,6 +44,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  font-weight: bold;
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
 
   padding: ${(props) => (props.noFill ? "none" : "0.4rem 1.3rem")};
   margin: ${(props) => (props.noFill ? "none" : "0.3rem 0")};

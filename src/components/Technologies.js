@@ -64,16 +64,29 @@ export default function Technologies() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
   padding: 1rem;
-  background-color: #141414;
+  background: linear-gradient(90deg, #141414 21px, transparent 1%) center,
+    linear-gradient(#141414 21px, transparent 1%) center, white;
+  background-size: 22px 22px;
+  border: 1px solid white;
   border-radius: 10px;
+
+  @media only screen and (min-width: 1180px) {
+    left: 5%;
+  }
+
+  @media only screen and (min-width: 1100px) {
+    margin-left: 1rem;
+  }
 `;
 
 const Tags = styled.div`
   display: flex;
-  justify-content: left;
   align-items: center;
   flex-wrap: wrap;
+  height: 100%;
+  box-sizing: border-box;
 
   * {
     margin-right: 0.5rem;
@@ -82,6 +95,7 @@ const Tags = styled.div`
 
 const Tag = styled.div`
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
@@ -91,7 +105,7 @@ const Tag = styled.div`
   background-color: ${(props) => props.experience === "interest" && "#8ac1d1"};
   color: #141414;
   font-weight: bold;
-
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
   border-radius: 5px;
 `;
 

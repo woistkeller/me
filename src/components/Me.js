@@ -7,19 +7,24 @@ export default function Me() {
   return (
     <Container>
       <Subtitle>Technologies</Subtitle>
-      <Text>
-        I know everything. Well, not everything, but I am proficient and
-        comfortable learning anything. I've been digging into React and Node,
-        like their environment and framewokers, building amazing real projects
-        that gave me (headache, resilience and problems-solving experience)
-        pride.
-      </Text>
-      <Technologies />
-      <Text>
-        I get bored easily, so I'm looking for challenges(always :D), that will
-        keep my motivation up and help my evolution on my way to expertise in
-        web development.
-      </Text>
+      <Content>
+        <Left>
+          <Text>
+            I know everything. Well, not everything, but I am proficient and
+            comfortable learning anything. I've been digging into React and
+            Node, like their environment and framewokers, building amazing real
+            projects that gave me (headache, resilience and problems-solving
+            experience) pride. I LEARN, I APPLY.
+          </Text>
+          <Text>
+            I get bored easily, so I'm looking for challenges (always :D), that
+            keep my motivation up and help my evolution on my way to
+            expertise in web development.
+          </Text>
+          <Image src="/laptop.png" />
+        </Left>
+        <Technologies />
+      </Content>
     </Container>
   );
 }
@@ -34,4 +39,24 @@ const Container = styled.div`
   background-position: bottom right;
   background-size: cover;
   margin-top: 1rem;
+`;
+
+const Content = styled.div`
+  display: flex;
+  @media only screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
+`;
+
+const Image = styled.img`
+  height: 250px;
+  width: 250px;
+  transform: scaleX(-1);
+`;
+
+const Left = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 `;

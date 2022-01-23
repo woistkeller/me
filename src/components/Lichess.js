@@ -43,7 +43,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
   border-radius: 10px;
   width: 100%;
   border: 1px solid #141414;
@@ -57,6 +57,6 @@ const Rating = styled(Subtitle)`
   justify-content: space-between;
 
   @media only screen and (max-width: 375px) {
-    flex-direction: column;đ
+    flex-direction: column;
   }
 `;

@@ -9,11 +9,11 @@ export default function Contact() {
       <Subtitle>Contact</Subtitle>
       <Text>caiankardoso@gmail.com</Text>
       <Text>caiankeller@icloud.com</Text>
-      <SubtitleContact>
+      <SubtitleContact style={{ flexWrap: "wrap" }}>
         Whatsapp +55 013 988127-4272{" "}
         <Button
           aria-label="redirect to a whatsapp chat with me"
-          style={{ marginTop: "1rem" }}
+          style={{ marginTop: "1rem", flexWrap: "wrap" }}
           onClick={() => window.open("https://wa.me/+550139881274272")}
         >
           Chat with me <FaWhatsapp />
@@ -30,7 +30,7 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   background: linear-gradient(170deg, #514da2, #423f84a1);
-  margin-top: 1rem;
+  margin: 1rem 0;
 `;
 
 const SubtitleContact = styled(Subtitle)`

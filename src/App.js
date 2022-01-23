@@ -50,10 +50,6 @@ const Container = styled.div`
   background: linear-gradient(90deg, #141414 21px, transparent 1%) center,
     linear-gradient(#141414 21px, transparent 1%) center, white;
   background-size: 22px 22px;
-`;
-
-const Box = styled.div`
-  display: block;
 
   overflow-y: scroll;
   -ms-overflow-style: none;
@@ -61,8 +57,11 @@ const Box = styled.div`
 
   &::-webkit-scrollbar {
     display: none;
-  }
+  }F
+`;
 
+const Box = styled.div`
+  display: block;
   max-width: 1000px;
   width: 100%;
   height: 100%;
