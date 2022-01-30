@@ -22,6 +22,7 @@ export default function AboutMe() {
 
 const Container = styled.div`
   display: flex;
+  justify-content: start;
   flex-direction: column;
-  margin-bottom: 1rem;
+  height: 100%;
 `;

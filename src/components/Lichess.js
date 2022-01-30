@@ -47,7 +47,7 @@ const Container = styled.div`
   border-radius: 10px;
   width: 100%;
   border: 1px solid #141414;
-  background-image: url("/gradientSecondary.png");
+  background-image: url("/chess.png");
   background-position: center center;
   background-size: cover;
 `;

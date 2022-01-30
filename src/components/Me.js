@@ -12,14 +12,14 @@ export default function Me() {
           <Text>
             I know everything. Well, not everything, but I am proficient and
             comfortable learning anything. I've been digging into React and
-            Node, like their environment and framewokers, building amazing real
+            Node, as their environment and framewokers, building amazing real
             projects that gave me (headache, resilience and problems-solving
-            experience) pride. I LEARN, I APPLY.
+            experience) pride. I learn, I apply.
           </Text>
           <Text>
             I get bored easily, so I'm looking for challenges (always :D), that
-            keep my motivation up and help my evolution on my way to
-            expertise in web development.
+            keep my motivation up and help my evolution on my way to expertise
+            in web development.
           </Text>
           <Image src="/laptop.png" />
         </Left>
@@ -35,10 +35,9 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background: linear-gradient(170deg, #514da2, #423f84a1);
-  background-position: bottom right;
+  background-image: url("aboutme.png");
+  background-position: center center;
   background-size: cover;
-  margin-top: 1rem;
 `;
 
 const Content = styled.div`

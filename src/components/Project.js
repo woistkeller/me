@@ -79,20 +79,26 @@ export default function Project({ project }) {
 }
 
 const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 10px;
-  margin: 1rem 0;
-  width: 100%;
+  height: auto;
+  width: 40%;
+  flex-grow: 1;
 
-  background: linear-gradient(170deg, #514da2, #423f84a1);
+  background-image: url("orange.jpg");
   background-position: center;
   background-size: cover;
 
   color: #141414;
+  &:last-child {
+    margin-bottom: 1rem;
+  }
 
-  &:before {
-    background-color: rgb(66, 63, 132);
-    background-size: cover;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
   }
 `;
 

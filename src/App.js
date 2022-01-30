@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import api from "./api/api";
 
 import styled from "styled-components";
 
-import Header from "./components/Header";
+import Home from "./components/Home";
 import Bar from "./components/Bar";
 
 import Projects from "./components/Projects";
@@ -12,7 +13,6 @@ import AboutMe from "./components/AboutMe";
 import Playground from "./components/Playground";
 
 export default function App() {
-  const [page, setPage] = useState("projects");
   const [song, setSong] = useState("song");
 
   //calling the api on a component that is never unmonted, to avoid multiple api requests.
@@ -23,18 +23,19 @@ export default function App() {
     })();
   }, []);
 
-  var settingPage = (e) => {
-    setPage(e);
-  };
-
   return (
     <Container>
       <Box>
-        <Header />
-        <Bar settingPage={settingPage} page={page} />
-        {page === "projects" && <Projects />}
-        {page === "aboutme" && <AboutMe />}
-        {page === "playground" && <Playground song={song} />}
+        <Bar />
+        <Content>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/playground" element={<Playground song={song} />} />
+            <Route path="*" element={<></>} />
+          </Routes>
+        </Content>
       </Box>
     </Container>
   );
@@ -57,12 +58,14 @@ const Container = styled.div`
 
   &::-webkit-scrollbar {
     display: none;
-  }F
+  }
 `;
 
 const Box = styled.div`
-  display: block;
-  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 1200px;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -70,4 +73,12 @@ const Box = styled.div`
   @media only screen and (max-width: 500px) {
     padding: 0.5rem;
   }
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 `;

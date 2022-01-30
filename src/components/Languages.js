@@ -59,7 +59,9 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
-  background: linear-gradient(170deg, #514da2, #423f84a1);
+  background-image: url("aboutme.png");
+  background-position: center center;
+  background-size: cover;
 `;
 
 const Flag = styled.img`

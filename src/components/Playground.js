@@ -21,8 +21,10 @@ export default function Playground({ song }) {
 
 const Container = styled.div`
   display: flex;
+  justify-content: start;
   flex-direction: column;
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 100%;
 
   * {
     text-shadow: none;

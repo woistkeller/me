@@ -50,7 +50,7 @@ export const Button = styled.button`
   padding: ${(props) => (props.noFill ? "none" : "0.4rem 1.3rem")};
   margin: ${(props) => (props.noFill ? "none" : "0.3rem 0")};
   font-size: 1rem;
-  border-radius: 7px;
+  border-radius: 6px;
   outline: none;
   border: none;
 

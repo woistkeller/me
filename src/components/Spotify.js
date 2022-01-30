@@ -137,7 +137,7 @@ const Cover = styled.img`
   } ;
 `;
 
-const Cached = styled.div`
+const Cached = styled(Text)`
   text-align: justify;
   margin-top: 1rem;
   font-size: 0.8rem;
