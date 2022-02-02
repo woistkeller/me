@@ -6,7 +6,6 @@ import { Button, Text, Subtitle } from "./styles";
 
 import { BsArrowRightShort } from "react-icons/bs";
 import { SiGithub } from "react-icons/si";
-import { MdOpenInNew } from "react-icons/md";
 
 export default function Project({ project }) {
   const [github, setGithub] = useState();
@@ -28,9 +27,10 @@ export default function Project({ project }) {
 
   return (
     <Container>
-      <Subtitle>{project.title}</Subtitle>
+      <div></div>
+      <Subtitle style={{ color: "#141414" }}>{project.title}</Subtitle>
       {typeof github !== "undefined" && github.description ? (
-        <Text>{github.description}</Text>
+        <Text style={{ color: "#141414" }}>{github.description}</Text>
       ) : (
         <Loading />
       )}
@@ -64,13 +64,11 @@ export default function Project({ project }) {
             href={github.url}
             aria-label={`go to github page of last commit of ${project.title}`}
           >
-            <SiGithub />
+            <SiGithub size="24" />
             <div style={{ marginLeft: "0.5rem" }}>
               Last commit <b>{github.message}</b>, day <b>{day}</b>, hour{" "}
               <b>{time}</b>.
             </div>
-            <Dot />
-            <MdOpenInNew style={{ marginLeft: "0.5rem" }} />
           </Link>
         )}
       </Buttons>
@@ -88,12 +86,11 @@ const Container = styled.div`
   width: 40%;
   flex-grow: 1;
 
-  background-image: url("orange.jpg");
-  background-position: center;
+  background-image: url("blue.svg");
+  background-position: top left;
   background-size: cover;
 
-  color: #141414;
-  &:last-child {
+  &:nth-last-child(-n+2) {
     margin-bottom: 1rem;
   }
 
@@ -126,38 +123,29 @@ const Tag = styled.div`
   align-items: center;
   margin-top: 0.5rem;
   padding: 0.05rem 0.5rem;
-  background-color: #c2c2c2;
+  background-color: white;
   color: #141414;
-  font-weight: bold;
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
 
   border-radius: 5px;
-`;
-
-const Dot = styled.div`
-  width: 10px;
-  height: 10px;
-  margin-left: 0.5rem;
-  border-radius: 50%;
-  background-color: #1db954;
-  border: 1px solid #1db954;
-  box-shadow: 0 0 15px #1db954;
 `;
 
 const Link = styled.a`
   display: flex;
   justify-content: start;
   align-items: center;
-  flex-wrap: wrap;
+
   width: 100%;
   margin-top: 0.5rem;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 7px;
-  background-color: #d4d4d4;
-  color: #141414;
+  background-color: #141414b3;
+  color: white;
   font-family: "IBM Plex Mono", monospace;
-  text-decoration: underline;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  text-align: justify;
+  text-decoration: none;
 
   * {
     margin-left: 0.5rem;

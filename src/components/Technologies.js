@@ -104,8 +104,8 @@ const Tag = styled.div`
   background-color: ${(props) => props.experience === "some" && "#f79c5c"};
   background-color: ${(props) => props.experience === "interest" && "#8ac1d1"};
   color: #141414;
-  font-weight: bold;
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 300;
+  font-family: 'IBM Plex Mono', monospace;
   border-radius: 5px;
 `;
 

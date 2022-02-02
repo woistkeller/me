@@ -6,11 +6,10 @@ export const Title = styled.h1`
   align-items: center;
   flex-wrap: wrap;
   color: white;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 1.9rem;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   margin: 0.5rem;
-  font-family: "Inter", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 
   @media only screen and (max-width: 370px) {
     font-size: 2rem;
@@ -20,23 +19,21 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
   display: flex;
   align-items: center;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 3);
-  font-weight: bold;
+  font-weight: 700;
   color: white;
   font-size: 1.2rem;
   margin: 0.5rem;
-  font-family: "Inter", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 `;
 
 export const Text = styled.p`
   color: white;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 3);
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0.5rem 0;
   text-align: justify;
-  font-weight: normal;
+  font-weight: 500;
   text-indent: 2rem;
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 `;
 
 export const Button = styled.button`
@@ -44,8 +41,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-weight: bold;
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-weight: 300;
+  font-family: 'IBM Plex Mono', monospace;
 
   padding: ${(props) => (props.noFill ? "none" : "0.4rem 1.3rem")};
   margin: ${(props) => (props.noFill ? "none" : "0.3rem 0")};

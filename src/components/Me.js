@@ -35,7 +35,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background-image: url("aboutme.png");
+  background-image: url("purple.svg");
   background-position: center center;
   background-size: cover;
 `;

@@ -11,6 +11,7 @@ import Bar from "./components/Bar";
 import Projects from "./components/Projects";
 import AboutMe from "./components/AboutMe";
 import Playground from "./components/Playground";
+import NotFound from "./components/NotFound";
 
 export default function App() {
   const [song, setSong] = useState("song");
@@ -33,7 +34,7 @@ export default function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/playground" element={<Playground song={song} />} />
-            <Route path="*" element={<></>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Content>
       </Box>

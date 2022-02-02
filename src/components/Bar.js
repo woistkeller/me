@@ -7,16 +7,28 @@ export default function Bar() {
   //it's a kinda ugly in small screens, improve later
   return (
     <Container>
-      <Button to="/" selected={page === "/" ? false : true}>
+      <Button color="#f69e37" to="/" selected={page === "/" ? false : true}>
         Home
       </Button>
-      <Button to="/projects" selected={page === "/projects" ? false : true}>
+      <Button
+        color="#ad50fa"
+        to="/projects"
+        selected={page === "/projects" ? false : true}
+      >
         Projects
       </Button>
-      <Button to="/about" selected={page === "/about" ? false : true}>
+      <Button
+        color="#0b2545"
+        to="/about"
+        selected={page === "/about" ? false : true}
+      >
         About me
       </Button>
-      <Button to="/playground" selected={page === "/playground" ? false : true}>
+      <Button
+        color="#fdaa88"
+        to="/playground"
+        selected={page === "/playground" ? false : true}
+      >
         Playground
       </Button>
     </Container>
@@ -28,9 +40,11 @@ const Container = styled.div`
   flex-wrap: nowrap;
   width: 100%;
   margin-top: 0.5rem;
-  background-color: #141414;
+  background: #141414;
+  border-radius: 7px;
   max-width: 1200px;
   margin-bottom: 1rem;
+  padding: 0 0.3rem;
 
   > * {
     width: 100%;
@@ -48,9 +62,10 @@ const Button = styled(Link)`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-weight: bold;
+  font-weight: 300;
   color: white;
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
+  text-decoration: none;
 
   padding: ${(props) => (props.selected ? "none" : "0.4rem 1.3rem")};
   margin: ${(props) => (props.selected ? "none" : "0.3rem 0")};
@@ -59,11 +74,16 @@ const Button = styled(Link)`
   outline: none;
   border: none;
 
-  background: ${(props) => (props.selected ? "none" : "#f69e37")};
+  background: ${(props) => (props.selected ? "none" : props.color)};
   color: ${(props) => (props.selected ? "white" : "#141414")};
+  color: ${(props) => props.color === "#0b2545" && "white"};
 
   transition: all 300ms ease-in-out;
   word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   @media only screen and (max-width: 400px) {
     padding: 0.4rem 0.3rem;

@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <Container>
       <FadeIn>
-        <Title>My projects</Title>
+        <Title style={{ background: "#141414a1" }}>My projects</Title>
         <Content>
           {Object.entries(projects).map(([key, project], i) => {
             return <Project project={project} key={i} />;

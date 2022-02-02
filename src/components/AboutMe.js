@@ -11,7 +11,7 @@ export default function AboutMe() {
   return (
     <Container>
       <FadeIn>
-        <Title>5 years programming to internet</Title>
+        <Title style={{ background: "#141414a1" }}>5 years programming to internet</Title>
         <Me />
         <Languages />
         <Contact />

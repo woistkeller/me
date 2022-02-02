@@ -95,18 +95,20 @@ const ButtonHome = styled(Button)`
   font-size: 1.3rem;
   color: #141414;
   margin-bottom: 1rem;
+  font-weight: 500;
 `;
 
 const TitleHome = styled(Title)`
+  font-family: "Inter", sans-serif;
   font-size: 4.5rem;
   width: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   background-image: url("title.jpg");
   background-position: center center;
   background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: none;
-  text-shadow: none;
 
   @media only screen and (max-width: 1230px) {
     font-size: 4rem;
@@ -125,6 +127,11 @@ const Logo = styled.div`
 const ButtonProfile = styled(Button)`
   justify-content: flex-end;
   font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  &:hover {
+    text-decoration: underline;
+  }
   svg {
     color: #f69e37;
   }
