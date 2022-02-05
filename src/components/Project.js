@@ -9,6 +9,7 @@ import { SiGithub } from "react-icons/si";
 
 export default function Project({ project }) {
   const [github, setGithub] = useState();
+  const [date, setDate] = useState();
 
   useEffect(() => {
     (async function () {
@@ -19,16 +20,15 @@ export default function Project({ project }) {
   useEffect(() => {
     if (typeof github !== "undefined") {
       var date = github.date.split("T");
-
       var day = date[0].slice(5, 10).replace("-", "/");
       var time = date[1].slice(0, 5);
-      setGithub({ ...github, dateSplited: { day: day, time: time } });
+      setDate({ day: day, time: time });
     }
   }, [github]);
 
   return (
     <Container>
-      <div></div>
+      {console.log(github)}
       <Subtitle style={{ color: "#141414" }}>{project.title}</Subtitle>
       {typeof github !== "undefined" && github.description ? (
         <Text style={{ color: "#141414" }}>{github.description}</Text>
@@ -67,8 +67,9 @@ export default function Project({ project }) {
           >
             <SiGithub size="24" />
             <div style={{ marginLeft: "0.5rem" }}>
-              Last commit <b>{github.message}</b>, day <b>{github.dateSplited.day}</b>, hour
-              <b>{github.dateSplited.time}</b>.
+              Last commit <b>{github.message}</b>, day
+              <b>{typeof date !== "undefined" && date.day}</b>, hour
+              <b>{typeof date !== "undefined" && date.time}</b>.
             </div>
           </Link>
         )}
