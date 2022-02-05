@@ -22,7 +22,7 @@ export default function Project({ project }) {
 
       var day = date[0].slice(5, 10).replace("-", "/");
       var time = date[1].slice(0, 5);
-      setGithub({ ...github, date: { day: day, time: time } });
+      setGithub({ ...github, dateSplited: { day: day, time: time } });
     }
   }, [github]);
 
@@ -67,8 +67,8 @@ export default function Project({ project }) {
           >
             <SiGithub size="24" />
             <div style={{ marginLeft: "0.5rem" }}>
-              Last commit <b>{github.message}</b>, day <b>{github.date.day}</b>, hour
-              <b>{github.date.time}</b>.
+              Last commit <b>{github.message}</b>, day <b>{github.dateSplited.day}</b>, hour
+              <b>{github.dateSplited.time}</b>.
             </div>
           </Link>
         )}
