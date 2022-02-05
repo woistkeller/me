@@ -16,14 +16,15 @@ export default function Project({ project }) {
     })();
   }, [project.name]);
 
-  //ugly code, can be simplified
-  //is it better put they directly in github state??
-  if (typeof github !== "undefined") {
-    var date = github.date.split("T");
+  useEffect(() => {
+    if (typeof github !== "undefined") {
+      var date = github.date.split("T");
 
-    var day = date[0].slice(5, 10).replace("-", "/");
-    var time = date[1].slice(0, 5);
-  }
+      var day = date[0].slice(5, 10).replace("-", "/");
+      var time = date[1].slice(0, 5);
+      setGithub({ ...github, date: { day: day, time: time } });
+    }
+  }, [github]);
 
   return (
     <Container>
@@ -66,8 +67,8 @@ export default function Project({ project }) {
           >
             <SiGithub size="24" />
             <div style={{ marginLeft: "0.5rem" }}>
-              Last commit <b>{github.message}</b>, day <b>{day}</b>, hour{" "}
-              <b>{time}</b>.
+              Last commit <b>{github.message}</b>, day <b>{github.date.day}</b>, hour
+              <b>{github.date.time}</b>.
             </div>
           </Link>
         )}
@@ -90,7 +91,7 @@ const Container = styled.div`
   background-position: top left;
   background-size: cover;
 
-  &:nth-last-child(-n+2) {
+  &:nth-last-child(-n + 2) {
     margin-bottom: 1rem;
   }
 
