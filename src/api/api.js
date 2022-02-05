@@ -10,7 +10,7 @@ const url = {
 const api = {
   lichessGet: async function () {
     return await axios
-      .get(`${url.development}/lichess`)
+      .get(`${url.production}/lichess`)
       .then((e) => {
         return e.data;
       })
@@ -20,7 +20,7 @@ const api = {
   },
   spotifyGet: async function () {
     return await axios
-      .get(`${url.development}/spotify`)
+      .get(`${url.production}/spotify`)
       .then((e) => {
         return e.data;
       })
@@ -29,7 +29,7 @@ const api = {
       });
   },
   githubGet: async function (gitName) {
-    return await axios.get(`${url.development}/github/${gitName}`).then((e) => {
+    return await axios.get(`${url.production}/github/${gitName}`).then((e) => {
       return e.data;
     });
   },
