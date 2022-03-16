@@ -102,13 +102,8 @@ const TitleHome = styled(Title)`
   font-family: "Inter", sans-serif;
   font-size: 4.5rem;
   width: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  background-image: url("title.jpg");
-  background-position: center center;
-  background-size: cover;
+  color: #ff8c00;
+  text-shadow: 2px 2px 10px #FFA500a1;
 
   @media only screen and (max-width: 1230px) {
     font-size: 4rem;
