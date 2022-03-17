@@ -21,21 +21,19 @@ export default function Home() {
             />
             Hi, I'm Caian Keller Cardoso
           </Logo>
-          <div
-            style={{ width: "100%", display: "flex", justifyContent: "end" }}
-          >
-            <ButtonProfile
-              aria-label="redirect to my github profile"
-              noFill
-              onClick={() => {
-                window.open("https://github.com/vonweinkeller");
-              }}
-            >
-              GitHub Page <SiGithub />
-            </ButtonProfile>
-          </div>
         </TitleHome>
-        <Text style={{ fontSize: "1.5rem", background: "#141414a1" }}>
+        <div style={{ width: "100%", display: "flex", justifyContent: "end" }}>
+          <ButtonProfile
+            aria-label="redirect to my github profile"
+            noFill
+            onClick={() => {
+              window.open("https://github.com/vonweinkeller");
+            }}
+          >
+            GitHub Page <SiGithub />
+          </ButtonProfile>
+        </div>
+        <Text>
           I am a dedicated and committed web developer, always looking to learn
           new things and discovery technologies. I want to help bring new
           horizons to the web and help make it more accessible, fun and
@@ -92,18 +90,21 @@ const Buttons = styled.div`
 
 const ButtonHome = styled(Button)`
   background: linear-gradient(230deg, #f69e37, #f32457);
-  font-size: 1.3rem;
+  box-shadow: 2px 2px 10px 5px #f69e37;
   color: #141414;
   margin-bottom: 1rem;
   font-weight: 500;
+  &:hover {
+    top: 1px;
+  }
 `;
 
 const TitleHome = styled(Title)`
   font-family: "Inter", sans-serif;
-  font-size: 4.5rem;
+  font-size: rem;
   width: 100%;
   color: #ff8c00;
-  text-shadow: 2px 2px 10px #FFA500a1;
+  text-shadow: 2px 2px 10px #ffa500a1;
 
   @media only screen and (max-width: 1230px) {
     font-size: 4rem;
@@ -121,13 +122,12 @@ const Logo = styled.div`
 
 const ButtonProfile = styled(Button)`
   justify-content: flex-end;
-  font-size: 1.5rem;
   font-weight: 500;
-  color: white;
+  padding: 0.5rem;
+  background: #c047f7;
+  box-shadow: 2px 2px 10px 5px #c047f7a1;
   &:hover {
     text-decoration: underline;
-  }
-  svg {
-    color: #f69e37;
+    top: 1px;
   }
 `;

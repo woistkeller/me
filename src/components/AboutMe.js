@@ -11,7 +11,7 @@ export default function AboutMe() {
   return (
     <Container>
       <FadeIn>
-        <Title style={{ background: "#141414a1" }}>5 years programming to internet</Title>
+        <Title>5 years programming to internet</Title>
         <Me />
         <Languages />
         <Contact />
@@ -25,4 +25,8 @@ const Container = styled.div`
   justify-content: start;
   flex-direction: column;
   height: 100%;
+
+  * {
+    color: white;
+  }
 `;

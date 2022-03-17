@@ -5,7 +5,7 @@ export const Title = styled.h1`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  color: white;
+  color: #141414;
   font-weight: 900;
   font-size: 1.9rem;
   margin: 0.5rem;
@@ -32,6 +32,7 @@ export const Text = styled.p`
   margin: 0.5rem 0;
   text-align: justify;
   font-weight: 500;
+  color: #141414;
   text-indent: 2rem;
   font-family: 'IBM Plex Mono', monospace;
 `;
@@ -39,6 +40,7 @@ export const Text = styled.p`
 export const Button = styled.button`
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
   flex-wrap: nowrap;
   font-weight: 300;
@@ -67,5 +69,6 @@ export const Button = styled.button`
 
   &:hover {
     text-decoration: underline;
+    top: 1px; 
   }
 `;

@@ -101,6 +101,7 @@ const Container = styled.div`
   padding: 1rem;
   margin-top: 0.5rem;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px 5px ${(props) => props.dynamicColor}a1;
   width: 100%;
 
   transition: all 500ms;
