@@ -42,6 +42,7 @@ const ButtonNotFound = styled(Link)`
   background-image: url("blue.svg");
   background-position: center center;
   background-size: cover;
+  box-shadow: 2px 2px 15px 5px #c047f7a1;
 
   &:hover {
     text-decoration: underline;

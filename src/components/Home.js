@@ -12,13 +12,13 @@ export default function Home() {
       <FadeIn>
         <TitleHome>
           <Logo>
-            <img
+            {/* <img
               alt=""
               src="/favicon.png"
               width="128"
               height="128"
               style={{ marginRight: "0.5rem" }}
-            />
+            /> */}
             Hi, I'm Caian Keller Cardoso
           </Logo>
         </TitleHome>
@@ -90,7 +90,7 @@ const Buttons = styled.div`
 
 const ButtonHome = styled(Button)`
   background: linear-gradient(230deg, #f69e37, #f32457);
-  box-shadow: 2px 2px 10px 5px #f69e37;
+  box-shadow: 2px 2px 15px 5px #f69e37;
   color: #141414;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -101,10 +101,10 @@ const ButtonHome = styled(Button)`
 
 const TitleHome = styled(Title)`
   font-family: "Inter", sans-serif;
-  font-size: rem;
+  font-size: 3rem;
   width: 100%;
-  color: #ff8c00;
-  text-shadow: 2px 2px 10px #ffa500a1;
+  color: #c047f7;
+  text-shadow: 2px 2px 10px #c047f7a1;
 
   @media only screen and (max-width: 1230px) {
     font-size: 4rem;
@@ -124,8 +124,19 @@ const ButtonProfile = styled(Button)`
   justify-content: flex-end;
   font-weight: 500;
   padding: 0.5rem;
-  background: #c047f7;
-  box-shadow: 2px 2px 10px 5px #c047f7a1;
+  transition: all 300ms ease-in-out;
+
+  color: #141414;
+  font-weight: 700;
+  background-image: url("blue.svg");
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 2px 2px 15px 5px #c047f7a1;
+
+  &:hover {
+    text-decoration: underline;
+    background-position: top;
+  }
   &:hover {
     text-decoration: underline;
     top: 1px;

@@ -92,7 +92,7 @@ const Container = styled.div`
   background-position: top left;
   background-size: cover;
 
-  &:nth-last-child(-n + 2) {
+  &:last-child {
     margin-bottom: 1rem;
   }
 
