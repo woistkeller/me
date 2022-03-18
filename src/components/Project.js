@@ -88,7 +88,7 @@ const Container = styled.div`
   width: 40%;
   flex-grow: 1;
 
-  background-image: url("blue.svg");
+  background-image: url("blue.png");
   background-position: top left;
   background-size: cover;
 

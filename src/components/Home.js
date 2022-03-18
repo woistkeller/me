@@ -101,7 +101,7 @@ const ButtonHome = styled(Button)`
 
 const TitleHome = styled(Title)`
   font-family: "Inter", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   width: 100%;
   color: #c047f7;
   text-shadow: 2px 2px 10px #c047f7a1;
@@ -128,7 +128,7 @@ const ButtonProfile = styled(Button)`
 
   color: #141414;
   font-weight: 700;
-  background-image: url("blue.svg");
+  background-image: url("blue.png");
   background-position: center center;
   background-size: cover;
   box-shadow: 2px 2px 15px 5px #c047f7a1;

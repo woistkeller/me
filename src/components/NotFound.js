@@ -39,7 +39,7 @@ const ButtonNotFound = styled(Link)`
 
   color: #141414;
   font-weight: 700;
-  background-image: url("blue.svg");
+  background-image: url("blue.png");
   background-position: center center;
   background-size: cover;
   box-shadow: 2px 2px 15px 5px #c047f7a1;
@@ -58,7 +58,7 @@ const TitleNotFound = styled(Title)`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  background-image: url("blue.svg");
+  background-image: url("blue.png");
   background-position: center center;
   background-size: cover;
   text-shadow: 2px 2px 10px #c047f7a1;
