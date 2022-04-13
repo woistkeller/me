@@ -2,28 +2,28 @@ const projects = [
   {
     title: "Okuyama (free lance)",
     demo: "https://marmohta.herokuapp.com",
-    github: "https://github.com/vonweinkeller/okuyama",
+    github: "https://github.com/woistkeller/okuyama",
     name: "okuyama",
     buildWith: ["JQuery", "Boostrap", "Socket.io", "React Native"],
   },
   {
     title: "Vorwärts (personal project)",
     demo: "https://vorwarts.herokuapp.com/library",
-    github: "https://github.com/vonweinkeller/vorwarts-api",
+    github: "https://github.com/woistkeller/vorwarts-api",
     name: "vorwarts-api",
     buildWith: ["React", "Node", "REST API", "MongoDB"],
   },
   {
     title: "This Portfolio",
     demo: "https://caiankeller.vercel.app",
-    github: "https://github.com/vonweinkeller/me",
+    github: "https://github.com/woistkeller/me",
     name: "me",
     buildWith: ["React", "Styled-components", "Axios"],
   },
   {
     title: "EightyFour (personal project)",
     demo: "https://eightyfour.vercel.app/",
-    github: "https://github.com/vonweinkeller/eightyfour",
+    github: "https://github.com/woistkeller/eightyfour",
     name: "eightyfour",
     buildWith: [
       "React",

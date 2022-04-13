@@ -27,7 +27,7 @@ export default function Home() {
             aria-label="redirect to my github profile"
             noFill
             onClick={() => {
-              window.open("https://github.com/vonweinkeller");
+              window.open("https://github.com/woistkeller");
             }}
           >
             GitHub Page <SiGithub />
