@@ -36,6 +36,20 @@ const projects = [
       "Private Routes",
     ],
   },
+  {
+    title: "Berlin (personal project)",
+    demo: "",
+    github: "https://github.com/woistkeller/berlin",
+    name: "Berlin",
+    buildWith: ["Python", "AppleScript", "PyInstaller"],
+  },
+  {
+    title: "Augusto (personal project)",
+    demo: "",
+    github: "https://github.com/woistkeller/augusto",
+    name: "augusto",
+    buildWith: ["React", "Electron", "Python", "Flask"],
+  },
 ];
 
 export default projects;
