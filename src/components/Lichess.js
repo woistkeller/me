@@ -46,7 +46,7 @@ const Container = styled.div`
   margin: 1rem 0;
   border-radius: 10px;
   width: 100%;
-  background-image: url("/chess.png");
+  background-image: url("/blue.png");
   background-position: center center;
   background-size: cover;
 `;

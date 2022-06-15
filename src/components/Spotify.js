@@ -8,10 +8,10 @@ import { BsSpotify, BsFillPlayFill, BsFillStopFill } from "react-icons/bs";
 
 export default function Spotify({ song }) {
   const { data } = usePalette(
-    typeof song !== "undefined" && song !== "error" ? song.cover.url : null
+    typeof song !== "undefined" && song !== "song" && song.cover.url
   );
   const [isPlaying, play] = useAudio(
-    typeof song !== "undefined" && song !== "error" ? song.preview : null
+    typeof song !== "undefined" && song !== "song" && song.preview
   );
 
   return (
@@ -22,7 +22,7 @@ export default function Spotify({ song }) {
         </Subtitle>
         <BsSpotify />
       </Header>
-      {song !== "error" ? (
+      {typeof song !== "undefined" ? (
         <Content>
           <Right>
             <Player>
@@ -33,6 +33,7 @@ export default function Spotify({ song }) {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    color: "white",
                   }}
                 >
                   <div>{typeof song !== "undefined" && song.title}</div>
@@ -59,7 +60,7 @@ export default function Spotify({ song }) {
                   }`}
                   style={{
                     marginTop: "1rem",
-                    backgroundColor: "#5df592",
+                    backgroundColor: data.vibrant,
                     color: "#141414",
                   }}
                   onClick={() => {
@@ -69,16 +70,14 @@ export default function Spotify({ song }) {
                   Play it on Spotify <BsSpotify />
                 </Button>
               </div>
-              {typeof song !== "undefined" && song.cached === "true" ? (
-                <Cached>
-                  This information come from a cache to avoid break spotify api
-                  usage rules. Last update at {song.updated_at}.
-                </Cached>
-              ) : null}
             </Player>
           </Right>
           <Cover
-            src={typeof song !== "undefined" ? song.cover.url : undefined}
+            src={
+              typeof song !== "undefined" && song !== "song"
+                ? song.cover.url
+                : null
+            }
           />
         </Content>
       ) : (
@@ -136,13 +135,6 @@ const Cover = styled.img`
     height: auto;
     width: 100%;
   } ;
-`;
-
-const Cached = styled(Text)`
-  text-align: justify;
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #5df592;
 `;
 
 const Header = styled.div`

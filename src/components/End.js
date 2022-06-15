@@ -1,16 +1,11 @@
-import { Link } from "react-router-dom";
-import FadeIn from "react-fade-in";
-
 import styled from "styled-components";
 import { Title } from "./styles";
 
-export default function NotFound() {
+export default function End() {
   return (
     <Container>
-      <FadeIn>
-        <TitleNotFound>404 Not Found</TitleNotFound>
-        <ButtonNotFound to="/">Back to the surface 😳</ButtonNotFound>
-      </FadeIn>
+      <Text>You reached the end.</Text>
+      {/* <ButtonNotFound>Back to the surface 😳</ButtonNotFound> */}
     </Container>
   );
 }
@@ -20,15 +15,17 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+
+  margin: 2rem 0;
 
   @media only screen and (max-width: 500px) {
     justify-content: start;
   }
 `;
 
-const ButtonNotFound = styled(Link)`
-  font-family: 'IBM Plex Mono', monospace;
-
+/*const ButtonNotFound = styled.button`
+font-family: 'Roboto Mono', monospace;
   padding: 0.4rem 1.3rem};
   font-size: 1rem;
   border-radius: 6px;
@@ -38,7 +35,6 @@ const ButtonNotFound = styled(Link)`
   transition: all 300ms ease-in-out;
 
   color: #141414;
-  font-weight: 700;
   background-image: url("blue.png");
   background-position: center center;
   background-size: cover;
@@ -48,9 +44,9 @@ const ButtonNotFound = styled(Link)`
     text-decoration: underline;
     background-position: top;
   }
-`;
+`;*/
 
-const TitleNotFound = styled(Title)`
+const Text = styled(Title)`
   font-family: "Inter", sans-serif;
   font-size: 4.5rem;
   width: 100%;

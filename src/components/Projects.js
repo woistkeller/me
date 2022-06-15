@@ -23,20 +23,12 @@ export default function Projects() {
   );
 }
 
-const Container = styled.div`
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-`;
+const Container = styled.div``;
 
 const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
-  height: 100%;
+  gap: 1rem;
 
   @media only screen and (max-width: 1200px) {
     gap: 1rem;

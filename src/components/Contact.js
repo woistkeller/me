@@ -29,7 +29,7 @@ const Container = styled.div`
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
-  background-image: url("thirdpurple.png");
+  background-image: url("blue.png");
   background-position: center center;
   background-size: cover;
   margin: 1rem 0;

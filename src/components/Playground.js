@@ -10,7 +10,7 @@ export default function Playground({ song }) {
   return (
     <Container>
       <FadeIn>
-        <Title>Welcome to my playground</Title>
+        <Title>This is my playground</Title>
         <Title>Here I play with some APIS</Title>
         <Spotify song={song} />
         <Lichess />

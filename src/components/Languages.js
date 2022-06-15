@@ -37,7 +37,7 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
-  background-image: url("secondpurple.png");
+  background-image: url("blue.png");
   background-position: center center;
   background-size: cover;
 `;

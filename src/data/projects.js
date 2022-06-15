@@ -1,31 +1,38 @@
 const projects = [
   {
+    title: "Berlin",
+    demo: "",
+    github: "https://github.com/woistkeller/berlin",
+    name: "Berlin",
+    builtWidth: ["Python", "AppleScript", "Flask"],
+  },
+  {
+    title: "Augusto",
+    demo: "",
+    github: "https://github.com/woistkeller/augusto",
+    name: "augusto",
+    builtWidth: ["React", "Electron", "Python", "Flask"],
+  },
+  {
     title: "Okuyama (free lance)",
     demo: "https://marmohta.herokuapp.com",
     github: "https://github.com/woistkeller/okuyama",
     name: "okuyama",
-    buildWith: ["JQuery", "Boostrap", "Socket.io", "React Native"],
+    builtWidth: ["JQuery", "Boostrap", "Socket.io", "React Native"],
   },
   {
-    title: "Vorwärts (personal project)",
+    title: "Vorwärts",
     demo: "https://vorwarts.herokuapp.com/library",
     github: "https://github.com/woistkeller/vorwarts-api",
     name: "vorwarts-api",
-    buildWith: ["React", "Node", "REST API", "MongoDB"],
+    builtWidth: ["React", "Node", "REST API", "MongoDB"],
   },
   {
-    title: "This Portfolio",
-    demo: "https://caiankeller.vercel.app",
-    github: "https://github.com/woistkeller/me",
-    name: "me",
-    buildWith: ["React", "Styled-components", "Axios"],
-  },
-  {
-    title: "EightyFour (personal project)",
+    title: "EightyFour",
     demo: "https://eightyfour.vercel.app/",
     github: "https://github.com/woistkeller/eightyfour",
     name: "eightyfour",
-    buildWith: [
+    builtWidth: [
       "React",
       "Redux-Toolkit",
       "RTK-Query",
@@ -35,20 +42,6 @@ const projects = [
       "Node",
       "Private Routes",
     ],
-  },
-  {
-    title: "Berlin (personal project)",
-    demo: "",
-    github: "https://github.com/woistkeller/berlin",
-    name: "Berlin",
-    buildWith: ["Python", "AppleScript", "PyInstaller"],
-  },
-  {
-    title: "Augusto (personal project)",
-    demo: "",
-    github: "https://github.com/woistkeller/augusto",
-    name: "augusto",
-    buildWith: ["React", "Electron", "Python", "Flask"],
   },
 ];
 

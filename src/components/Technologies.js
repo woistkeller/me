@@ -33,13 +33,13 @@ export default function Technologies() {
           <FaReact />
           React Native
         </Tag>
+        <Tag experience="some">
+          <SiFlask />
+          Python
+        </Tag>
         <Tag experience="interest">
           <FaVuejs />
           Vue.js
-        </Tag>
-        <Tag experience="interest">
-          <SiFlask />
-          Python
         </Tag>
         <Tag experience="interest">
           <SiTypescript />
@@ -51,11 +51,11 @@ export default function Technologies() {
       </Tags>
       <div style={{ marginTop: "0.5rem" }}>
         <Color color="good">Green</Color>
-        <Subtitle>Good knowledge</Subtitle>
+        <Subtitle style={{ color: "white" }}>Good knowledge</Subtitle>
         <Color color="some"> Orange</Color>
-        <Subtitle>Some experience</Subtitle>
+        <Subtitle style={{ color: "white" }}>Some experience</Subtitle>
         <Color color="interest">Blue</Color>
-        <Subtitle>Interest</Subtitle>
+        <Subtitle style={{ color: "white" }}>Interest</Subtitle>
       </div>
     </Container>
   );
@@ -71,6 +71,7 @@ const Container = styled.div`
   background-size: 22px 22px;
   border: 1px solid white;
   border-radius: 10px;
+  color: #141414;
 
   @media only screen and (min-width: 1180px) {
     left: 5%;
@@ -104,8 +105,7 @@ const Tag = styled.div`
   background-color: ${(props) => props.experience === "some" && "#f79c5c"};
   background-color: ${(props) => props.experience === "interest" && "#8ac1d1"};
   color: #141414;
-  font-weight: 300;
-  font-family: 'IBM Plex Mono', monospace;
+ font-family: 'Roboto Mono', monospace;
   border-radius: 5px;
 `;
 

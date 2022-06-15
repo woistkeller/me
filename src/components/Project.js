@@ -28,16 +28,11 @@ export default function Project({ project }) {
 
   return (
     <Container>
-      {console.log(github)}
-      <Subtitle style={{ color: "#141414" }}>{project.title}</Subtitle>
-      {typeof github !== "undefined" && github.description ? (
-        <Text style={{ color: "#141414" }}>{github.description}</Text>
-      ) : (
-        <Loading />
-      )}
+      <Subtitle>{project.title}</Subtitle>
+      {github ? <Text>{github.description}</Text> : <Loading />}
       <Tags>
-        {project.buildWith.map((buildWith, key) => {
-          return <Tag key={key}>{buildWith}</Tag>;
+        {project.builtWidth.map((builtWidth, key) => {
+          return <Tag key={key}>{builtWidth}</Tag>;
         })}
       </Tags>
       <Buttons>
@@ -49,7 +44,7 @@ export default function Project({ project }) {
           Demo
           <BsArrowRightShort />
         </Button>
-        {typeof project.github !== "undefined" && (
+        {project && (
           <Button
             aria-label={`redirect to github page about ${project.title}`}
             style={{ marginTop: "1rem" }}
@@ -58,7 +53,7 @@ export default function Project({ project }) {
             GitHub <SiGithub />
           </Button>
         )}
-        {typeof github !== "undefined" && (
+        {github && (
           <Link
             rel="noreferrer"
             target="_blank"
@@ -67,9 +62,8 @@ export default function Project({ project }) {
           >
             <SiGithub size="24" />
             <div style={{ marginLeft: "0.5rem" }}>
-              Last commit <b>{github.message}</b>, day
-              <b>{typeof date !== "undefined" && date.day}</b>, hour
-              <b>{typeof date !== "undefined" && date.time}</b>.
+              Last commit <b>{github.message}</b>, day <b>{date && date.day}</b>
+              , hour <b>{date && date.time}</b>.
             </div>
           </Link>
         )}
@@ -124,38 +118,30 @@ const Tag = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  padding: 0.05rem 0.5rem;
+  padding: 0.1rem 0.7rem;
   background-color: white;
   color: #141414;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 300;
-
+ font-family: 'Roboto Mono', monospace;
   border-radius: 5px;
 `;
 
 const Link = styled.a`
   display: flex;
-  justify-content: start;
+  justify-content: left;
   align-items: center;
-
+ font-family: 'Roboto Mono', monospace;
   width: 100%;
   margin-top: 0.5rem;
   padding: 0.8rem;
   border-radius: 7px;
-  background-color: #141414b3;
+  background-color: #141414;
   color: white;
-  font-family: "IBM Plex Mono", monospace;
   font-size: 0.8rem;
-  text-align: justify;
   text-decoration: none;
-
-  * {
-    margin-left: 0.5rem;
-  }
 `;
 
 const Loading = styled(Text)`
-  background-image: url("/loading.gif");
+  background-image: url("loading.gif");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 32px;

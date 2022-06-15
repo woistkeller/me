@@ -1,5 +1,3 @@
-import FadeIn from "react-fade-in";
-
 import styled from "styled-components";
 import { Title } from "./styles";
 
@@ -10,14 +8,12 @@ import Contact from "./Contact";
 export default function AboutMe() {
   return (
     <Container>
-      <FadeIn>
-        <Title style={{ color: "#141414" }}>
-          5 years programming to internet
-        </Title>
-        <Me />
-        <Languages />
-        <Contact />
-      </FadeIn>
+      <Title style={{ color: "#141414" }}>
+        5 years programming to internet
+      </Title>
+      <Me />
+      <Languages />
+      <Contact />
     </Container>
   );
 }
@@ -27,8 +23,5 @@ const Container = styled.div`
   justify-content: start;
   flex-direction: column;
   height: 100%;
-
-  * {
-    color: white;
-  }
+  margin: 1rem 0;
 `;
