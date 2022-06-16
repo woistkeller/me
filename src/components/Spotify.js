@@ -7,12 +7,8 @@ import { Subtitle, Button, Text } from "./styles";
 import { BsSpotify, BsFillPlayFill, BsFillStopFill } from "react-icons/bs";
 
 export default function Spotify({ song }) {
-  const { data } = usePalette(
-    typeof song !== "undefined" && song !== "song" && song.cover.url
-  );
-  const [isPlaying, play] = useAudio(
-    typeof song !== "undefined" && song !== "song" && song.preview
-  );
+  const { data } = usePalette(song && song.cover.url);
+  const [isPlaying, play] = useAudio(song && song.preview);
 
   return (
     <Container dynamicColor={data.vibrant}>
@@ -22,7 +18,7 @@ export default function Spotify({ song }) {
         </Subtitle>
         <BsSpotify />
       </Header>
-      {typeof song !== "undefined" ? (
+      {song ? (
         <Content>
           <Right>
             <Player>
@@ -36,7 +32,7 @@ export default function Spotify({ song }) {
                     color: "white",
                   }}
                 >
-                  <div>{typeof song !== "undefined" && song.title}</div>
+                  <div>{song && song.title}</div>
                   <div>
                     {isPlaying ? (
                       <BsFillStopFill size="32" onClick={play} />
@@ -52,11 +48,11 @@ export default function Spotify({ song }) {
                     textIndent: 0,
                   }}
                 >
-                  {typeof song !== "undefined" && song.artist}
+                  {song && song.artist}
                 </Text>
                 <Button
                   aria-label={`redirect to the spotify a page of ${
-                    typeof song !== "undefined" && song.title
+                    song && song.title
                   }`}
                   style={{
                     marginTop: "1rem",
@@ -72,13 +68,7 @@ export default function Spotify({ song }) {
               </div>
             </Player>
           </Right>
-          <Cover
-            src={
-              typeof song !== "undefined" && song !== "song"
-                ? song.cover.url
-                : null
-            }
-          />
+          <Cover src={song ? song.cover.url : null} />
         </Content>
       ) : (
         <Content>

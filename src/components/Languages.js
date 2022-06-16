@@ -38,7 +38,7 @@ const Container = styled.div`
   padding: 1rem;
   margin-top: 1rem;
   background-image: url("blue.png");
-  background-position: center center;
+  background-position: top left;
   background-size: cover;
 `;
 

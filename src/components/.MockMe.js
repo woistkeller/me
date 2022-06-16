@@ -25,9 +25,7 @@ export default function MockMe() {
       <Text>
         {typeof song === "none"
           ? "I'm not listing any song now ):"
-          : `I'm listing ${
-              typeof song !== "undefined" && song.title
-            }, right now`}
+          : `I'm listing ${song && song.title}, right now`}
       </Text>
 
       <Player>

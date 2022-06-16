@@ -12,7 +12,7 @@ export default function AboutMe() {
         5 years programming to internet
       </Title>
       <Me />
-      <Languages />
+      {/* <Languages /> */}
       <Contact />
     </Container>
   );

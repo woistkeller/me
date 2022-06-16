@@ -36,7 +36,7 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   background-image: url("blue.png");
-  background-position: center center;
+  background-position: top left;
   background-size: cover;
 `;
 

@@ -18,7 +18,7 @@ export default function Project({ project }) {
   }, [project.name]);
 
   useEffect(() => {
-    if (typeof github !== "undefined") {
+    if (github) {
       var date = github.date.split("T");
       var day = date[0].slice(5, 10).replace("-", "/");
       var time = date[1].slice(0, 5);
@@ -38,6 +38,7 @@ export default function Project({ project }) {
       <Buttons>
         <Button
           aria-label={`see a demo of ${project.title}`}
+          disabled={project.demo === ""}
           style={{ marginTop: "1rem", marginRight: "1rem" }}
           onClick={() => window.open(project.demo)}
         >
@@ -121,7 +122,7 @@ const Tag = styled.div`
   padding: 0.1rem 0.7rem;
   background-color: white;
   color: #141414;
- font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   border-radius: 5px;
 `;
 
@@ -129,7 +130,7 @@ const Link = styled.a`
   display: flex;
   justify-content: left;
   align-items: center;
- font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   width: 100%;
   margin-top: 0.5rem;
   padding: 0.8rem;

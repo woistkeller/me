@@ -32,7 +32,7 @@ export const Text = styled.p`
   margin: 0.3rem 0;
   text-align: justify;
   text-indent: 1rem;
- font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 `;
 
 export const Button = styled.button`
@@ -41,7 +41,7 @@ export const Button = styled.button`
   position: relative;
   align-items: center;
   flex-wrap: nowrap;
- font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 
   padding: ${(props) => (props.noFill ? "none" : "0.4rem 1.3rem")};
   margin: ${(props) => (props.noFill ? "none" : "0.3rem 0")};
@@ -50,8 +50,10 @@ export const Button = styled.button`
   outline: none;
   border: none;
 
-  background: ${(props) => (props.noFill ? "none" : "#141414")};
-  color: ${(props) => (props.noFill ? "#141414" : "white")};
+  background: ${(props) =>
+    props.noFill ? "none" : props.disabled ? "#c6c6c6" : "#141414"};
+  color: ${(props) =>
+    props.noFill ? "#141414" : props.disabled ? "#212121" : "white"};
 
   transition: all 300ms ease-in-out;
   word-break: break-all;

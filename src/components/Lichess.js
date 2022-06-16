@@ -21,10 +21,8 @@ export default function Lichess() {
         Lichess <FaChess style={{ marginLeft: "1rem" }} />
       </Subtitle>
       <Rating style={{ color: "#141414" }}>
-        <div>{typeof lichess !== "undefined" && lichess.username} </div>
-        <div>
-          Rapid rating {typeof lichess !== "undefined" && lichess.rating}
-        </div>
+        <div>{lichess && lichess.username} </div>
+        <div>Rapid rating {lichess && lichess.rating}</div>
       </Rating>
       <Button
         aria-label="redirect to my lichess profile"
