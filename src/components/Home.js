@@ -6,7 +6,7 @@ import { Title, Button, Text } from "./styles";
 import axios from "axios";
 
 import { SiGithub } from "react-icons/si";
-import { BsFillFileEarmarkMedicalFill, BsLinkedin } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 
 export default function Home() {
   const [github, setGithub] = useState();
@@ -47,17 +47,6 @@ export default function Home() {
             }
           >
             Linkedin <BsLinkedin />
-          </Button>
-          <Button
-            aria-label="open my resume in PDF"
-            style={{ marginTop: "0.5rem" }}
-            onClick={() => {
-              window.open(
-                "https://drive.google.com/file/d/11VTvrC4leLuH5MbcyyC1PHd45UFZHfRF/view?usp=sharing"
-              );
-            }}
-          >
-            Resume <BsFillFileEarmarkMedicalFill />
           </Button>
         </Buttons>
       </FadeIn>
